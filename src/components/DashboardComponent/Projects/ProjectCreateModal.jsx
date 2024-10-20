@@ -19,22 +19,27 @@ import { FaPlusCircle } from "react-icons/fa";
 import { toast } from "sonner";
 
 const ProjectCreateModal = ({ setReload }) => {
-  const [imageFile, setImageFile] = useState(null);
+  const [imageFile, setImageFile] = useState([]);
   const [category, setCategory] = useState("on-going");
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
-    description: "",
+    image: [],
     shortDescription: "",
+    subTitle: "",
+    description: "",
+    handOverDate: "",
     location: "",
-    image: null,
+    category: "",
+    status: false,
   });
 
   const [loading, setLoading] = useState(false);
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
-    setImageFile(file);
+    let allImage = [...imageFile, file];
+    setImageFile(allImage);
   };
 
   const handleInputChange = (e) => {
@@ -47,8 +52,13 @@ const ProjectCreateModal = ({ setReload }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const imageUrl = [];
     const toastId = toast.loading("loading...");
-    const imageUrl = await uploadImageToImgBB(imageFile);
+    for (let img of imageFile) {
+      console.log(img);
+      let result = await uploadImageToImgBB(img);
+      imageUrl.push(result);
+    }
     try {
       const projectData = { ...formData, image: imageUrl, category };
 
@@ -65,7 +75,7 @@ const ProjectCreateModal = ({ setReload }) => {
       const data = await response.json();
 
       if (data?.success === true) {
-        toast.success("Article submitted successfully");
+        toast.success("Project Created successfully");
         e.target.reset();
         setIsOpen(false);
         setReload((prev) => prev + 1);
@@ -88,7 +98,7 @@ const ProjectCreateModal = ({ setReload }) => {
           variant="outline"
           className="flex gap-3 bg-si-primary py-4 text-end font-semibold text-white duration-500 bg-gray-700 "
         >
-          Create Blog
+          Create Project
           <FaPlusCircle className="inline text-xl" />
         </Button>
       </AlertDialogTrigger>
@@ -102,7 +112,6 @@ const ProjectCreateModal = ({ setReload }) => {
             <Input
               type="text"
               name="name"
-              value={formData.name}
               onChange={handleInputChange}
               required
             />
@@ -117,6 +126,15 @@ const ProjectCreateModal = ({ setReload }) => {
             />
           </div>
           <div className="mb-4">
+            <Label className="mb-2 block">Sub Title</Label>
+            <Textarea
+              type="text"
+              name="subTitle"
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="mb-4">
             <Label className="mb-2 block">Description</Label>
             <Textarea
               type="text"
@@ -125,18 +143,58 @@ const ProjectCreateModal = ({ setReload }) => {
               required
             />
           </div>
-
           <div className="mb-4">
-            <Label className="mb-2 block">Project Thumbnail</Label>
-            <Input
-              id="projectImage"
-              type="file"
-              accept="image/*"
-              name="image"
-              onChange={handleImageUpload}
+            <Label className="mb-2 block">Hand Over Date</Label>
+            <input
+              className="border px-3 py-2 rounded-md"
+              type="date"
+              name="handOverDate"
+              onChange={handleInputChange}
+              required
             />
           </div>
-
+          <div className="mb-4 grid grid-cols-4 gap-3">
+            <div className="mb-4">
+              <Label className="mb-2 block">Image 1</Label>
+              <Input
+                id="projectImage"
+                type="file"
+                accept="image/*"
+                name="image"
+                onChange={handleImageUpload}
+              />
+            </div>
+            <div className="mb-4">
+              <Label className="mb-2 block">Image-2</Label>
+              <Input
+                id="projectImage"
+                type="file"
+                accept="image/*"
+                name="image"
+                onChange={handleImageUpload}
+              />
+            </div>
+            <div className="mb-4">
+              <Label className="mb-2 block">Image-3</Label>
+              <Input
+                id="projectImage"
+                type="file"
+                accept="image/*"
+                name="image"
+                onChange={handleImageUpload}
+              />
+            </div>
+            <div className="mb-4">
+              <Label className="mb-2 block">Image-4</Label>
+              <Input
+                id="projectImage"
+                type="file"
+                accept="image/*"
+                name="image"
+                onChange={handleImageUpload}
+              />
+            </div>
+          </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="mb-4">
               <Label className="mb-2 block">Category</Label>
@@ -157,7 +215,6 @@ const ProjectCreateModal = ({ setReload }) => {
               <Input
                 type="text"
                 name="location"
-                value={formData.location}
                 onChange={handleInputChange}
                 required
               />
