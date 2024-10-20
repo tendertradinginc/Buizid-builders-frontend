@@ -140,8 +140,8 @@ const BlogUpdate = ({ data, setReload }) => {
 
           <div className=" ">
             <div
-              className={`flex h-10 items-center justify-center rounded font-semibold text-white hover:text-black ${
-                isDisbaled ? "bg-[#91AADF]" : "bg-si-primary"
+              className={`flex h-10 items-center justify-center rounded font-semibold border bg-blue-950 text-white hover:text-black  hover:bg-transparent duration-200 border-blue-950 cursor-pointer ${
+                isDisbaled ? "bg-[#91AADF]" : "text-black"
               }`}
             >
               <button

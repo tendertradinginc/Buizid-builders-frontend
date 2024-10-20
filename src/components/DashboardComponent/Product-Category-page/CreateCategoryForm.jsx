@@ -16,7 +16,6 @@ export default function CreateCategoryForm({ setReload }) {
     name: "",
     img: "",
     featuredStatus: false,
-    shortDescription: "", // Add this line
   });
 
   // Image upload handler
@@ -38,7 +37,7 @@ export default function CreateCategoryForm({ setReload }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.img || !formData.shortDescription) {
+    if (!formData.name || !formData.img) {
       // Update this line
       toast.error("Please provide all required fields.");
       return;
@@ -56,7 +55,6 @@ export default function CreateCategoryForm({ setReload }) {
         name: "",
         img: "",
         featuredStatus: false,
-        shortDescription: "",
       });
     } catch (error) {
       console.error("Failed to submit form:", error);
@@ -74,18 +72,6 @@ export default function CreateCategoryForm({ setReload }) {
             placeholder="Enter category name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="short-description">Short Description</Label>
-          <Input
-            name="short-description"
-            placeholder="Enter short description"
-            value={formData.shortDescription}
-            onChange={(e) =>
-              setFormData({ ...formData, shortDescription: e.target.value })
-            }
           />
         </div>
 

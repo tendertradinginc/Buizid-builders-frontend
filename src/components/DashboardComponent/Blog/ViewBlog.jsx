@@ -36,10 +36,7 @@ const ViewBlog = ({ data }) => {
           <AlertDialogDescription>{data?.description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel className="bg-si-primary text-white">
-            {" "}
-            Cancel
-          </AlertDialogCancel>
+          <AlertDialogCancel className=""> Cancel</AlertDialogCancel>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

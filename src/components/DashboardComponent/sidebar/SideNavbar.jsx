@@ -75,8 +75,8 @@ const SideNavbar = () => {
 
     {
       id: 10,
-      href: "/dashboard/service-category",
-      label: "Service Category",
+      href: "/dashboard/product-category",
+      label: "Product Category",
     },
 
     {

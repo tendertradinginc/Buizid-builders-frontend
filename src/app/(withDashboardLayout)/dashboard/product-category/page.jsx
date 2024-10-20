@@ -1,7 +1,7 @@
 "use client";
 
-import CreateCategoryForm from "@/components/DashboardComponent/Service-Category-page/CreateCategoryForm";
-import UpdateCategoryForm from "@/components/DashboardComponent/Service-Category-page/UpdateCategoryForm";
+import CreateCategoryForm from "@/components/DashboardComponent/Product-Category-page/CreateCategoryForm";
+import UpdateCategoryForm from "@/components/DashboardComponent/Product-Category-page/UpdateCategoryForm";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -18,7 +18,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { CaretDownIcon, Pencil1Icon } from "@radix-ui/react-icons";
 import axios from "axios";
@@ -113,16 +112,16 @@ const Page = () => {
               <div className="flex items-center justify-between pb-6">
                 <h2 className="text-2xl font-semibold text-si-primary">
                   <AiFillDatabase className="mb-1 inline" />
-                  Category List
+                  Product Category List
                 </h2>
                 <div className="flex items-center gap-2">
                   <div>
-                    <Input
+                    {/* <Input
                       type="text"
                       placeholder="Search"
                       value={searchTerm}
                       onChange={handleSearch}
-                    />
+                    /> */}
                   </div>
                   <div>
                     <Dialog>
