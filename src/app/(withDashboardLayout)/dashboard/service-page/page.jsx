@@ -103,6 +103,7 @@ const Page = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+  console.log(data);
 
   return (
     <div>
@@ -158,7 +159,7 @@ const Page = () => {
                     <th className="px-4 py-2">No</th>
                     <th className="px-4 py-2">Name</th>
                     <th className="px-4 py-2">Image</th>
-                    <th className="px-4 py-2">Category</th>
+
                     <th className="px-4 py-2">Featured Status</th>
                     <th className="px-4 py-2">Actions</th>
                   </tr>
@@ -179,7 +180,7 @@ const Page = () => {
                             className="object-cover"
                           />
                         </td>
-                        <td className="px-4 py-2">{service.category}</td>
+
                         <td className="px-4 py-2">
                           {service.featuredStatus ? "Yes" : "No"}
                         </td>

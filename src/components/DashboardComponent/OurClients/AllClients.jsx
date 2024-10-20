@@ -69,18 +69,12 @@ const AllClients = () => {
     window.history.replaceState({}, "", `?${params.toString()}`); // Update the URL without reloading
   };
 
-  // const filteredClients = clients.filter(client =>
-  //   client.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-  //   client.description.toLowerCase().includes(searchQuery.toLowerCase())
-  // );
-
   const filteredClients = clients.filter(
     (client) =>
-      client.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      client.description.toLowerCase().includes(searchQuery.toLowerCase())
+      client.name?.toLowerCase().includes(searchQuery?.toLowerCase()) ||
+      client.description?.toLowerCase().includes(searchQuery?.toLowerCase())
   );
 
-  // loading skeleton
   const skeleton = new Array(10).fill(Math.random());
 
   return (

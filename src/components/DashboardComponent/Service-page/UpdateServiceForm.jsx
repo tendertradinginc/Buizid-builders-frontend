@@ -1,6 +1,5 @@
 "use client";
 
-import { CategoryCombobox } from "@/components/shared/CategoryCombobox/CategoryCombobox";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -17,10 +16,11 @@ export default function UpdateServiceForm({ serviceId, setReload }) {
   const [formData, setFormData] = useState({
     name: "",
     image: "",
-    category: "",
     shortDescription: "",
+    highlightDescription: "",
     fullDescription: "",
-    featuredStatus: false,
+    subtitle: "",
+    subtitleDescription: "",
   });
 
   useEffect(() => {
@@ -60,9 +60,11 @@ export default function UpdateServiceForm({ serviceId, setReload }) {
     if (
       !formData.name ||
       !formData.image ||
-      !formData.category ||
       !formData.shortDescription ||
-      !formData.fullDescription
+      !formData.highlightDescription ||
+      !formData.fullDescription ||
+      !formData.subtitle ||
+      !formData.subtitleDescription
     ) {
       toast.error("Please provide all required fields.");
       return;
@@ -126,14 +128,6 @@ export default function UpdateServiceForm({ serviceId, setReload }) {
         )}
 
         <div className="space-y-2">
-          <Label htmlFor="service-category">Category</Label>
-          <CategoryCombobox
-            category={formData.category}
-            setCategory={(category) => setFormData({ ...formData, category })}
-          />
-        </div>
-
-        <div className="space-y-2">
           <Label htmlFor="short-description">Short Description</Label>
           <Input
             name="short-description"
@@ -146,6 +140,17 @@ export default function UpdateServiceForm({ serviceId, setReload }) {
         </div>
 
         <div className="space-y-2">
+          <Label htmlFor="highlightDescription">Highlight Description</Label>
+          <Textarea
+            name="highlightDescription"
+            placeholder="Enter full description"
+            value={formData.highlightDescription}
+            onChange={(e) =>
+              setFormData({ ...formData, highlightDescription: e.target.value })
+            }
+          />
+        </div>
+        <div className="space-y-2">
           <Label htmlFor="full-description">Full Description</Label>
           <Textarea
             name="full-description"
@@ -156,7 +161,28 @@ export default function UpdateServiceForm({ serviceId, setReload }) {
             }
           />
         </div>
-
+        <div className="space-y-2">
+          <Label htmlFor="subtitle">Sub title</Label>
+          <Textarea
+            name="subtitle"
+            placeholder="Enter full description"
+            value={formData.subtitle}
+            onChange={(e) =>
+              setFormData({ ...formData, subtitle: e.target.value })
+            }
+          />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="subtitleDescription">Subtitle Description</Label>
+          <Textarea
+            name="subtitleDescription"
+            placeholder="Enter full description"
+            value={formData.subtitleDescription}
+            onChange={(e) =>
+              setFormData({ ...formData, subtitleDescription: e.target.value })
+            }
+          />
+        </div>
         <div className="flex items-center space-x-2">
           <Checkbox
             id="featured-status"
