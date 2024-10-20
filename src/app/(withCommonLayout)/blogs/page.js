@@ -32,7 +32,7 @@ const page = async () => {
                 <p className="line-clamp-4 text-justify font-medium text-[#454545] lg:mb-7">
                   {blogs[0]?.description}
                 </p>
-                <Link href={`/blogs/${blogs[0]._id}`}>
+                <Link href={`/blogs/${blogs[0]?._id}`}>
                   {" "}
                   <button className="mt-4 rounded-sm py-2 px-8 font-semibold text-white duration-200 bg-[#0A2F4D]  hover:bg-[#F78C40]">
                     Read More
