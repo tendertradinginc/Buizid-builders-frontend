@@ -16,9 +16,7 @@ const Vision = () => {
                 {" "}
                 We have a vision for <br className="hidden md:block" /> the
                 future of <br />
-                <span className="border-b-4 border-[#F78C40]">
-                  construction
-                </span>
+                <span className="border-b-4 border-blue-950">construction</span>
               </>
             }
           />
@@ -26,13 +24,13 @@ const Vision = () => {
             <Tabs defaultValue="vision" className="">
               <TabsList className="grid w-full grid-cols-2 mb-12 mt-5 gap-3 max-w-max rounded-full border-2 border-[#F2DAB24D] py-2 h-max mx-auto">
                 <TabsTrigger
-                  className="data-[state=active]:bg-[#F78C40] data-[state=active]:text-white text-base md:text-xl rounded-full py-2.5 px-6"
+                  className="data-[state=active]:bg-blue-950 data-[state=active]:text-white text-base md:text-xl rounded-full py-2.5 px-6"
                   value="vision"
                 >
                   Our Vision
                 </TabsTrigger>
                 <TabsTrigger
-                  className="data-[state=active]:bg-[#F78C40] data-[state=active]:text-white text-base md:text-xl rounded-full py-2.5 px-6 "
+                  className="data-[state=active]:bg-blue-950 data-[state=active]:text-white text-base md:text-xl rounded-full py-2.5 px-6 "
                   value="value"
                 >
                   Our Values
@@ -124,7 +122,7 @@ const Vision = () => {
           }}
           className=""
         >
-          <div className="p-2 border-4 border-[#F78C40] w-full h-full">
+          <div className="p-2 border-4 border-blue-950 w-full h-full">
             <Image
               src="https://i.postimg.cc/4ysfpKG8/Frame-76484-1.png"
               alt="our vision image"

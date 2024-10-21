@@ -25,10 +25,10 @@ const SectionHeadingCenter = ({
         )}
         <div className="flex items-center justify-center gap-3 -mt-12 ml-4 ">
           {" "}
-          <h3 className="text-[#F78C40] font-bold inline-block text-center">
+          <h3 className="text-blue-950 font-bold inline-block text-center">
             {subTitle}
           </h3>
-          <p className="h-1 w-16 bg-gradient-to-tr from-[#ffc1957e] to-[#F78C40]"></p>
+          <p className="h-1 w-16 bg-gradient-to-tr from-[#ffc1957e] to-blue-950"></p>
         </div>
         <h1 className="text-2xl md:text-4xl font-bold mt-4 mb-8 text-center ">
           {title}

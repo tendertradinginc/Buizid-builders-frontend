@@ -25,7 +25,7 @@ const PageBanner = ({ title, description, banner }) => {
             <ol className="inline-flex space-x-1 md:space-x-3">
               <li className="inline-flex items-center">
                 <Link href="/">
-                  <p className="text-white hover:text-[#F78C40]">Home</p>
+                  <p className="text-white hover:text-blue-950">Home</p>
                 </Link>
                 <span className="mx-2">/</span>
               </li>
@@ -34,7 +34,7 @@ const PageBanner = ({ title, description, banner }) => {
                   {index !== breadcrumb.length - 1 ? (
                     <Link
                       href={crumb.href}
-                      className="text-white hover:text-[#F78C40]"
+                      className="text-white hover:text-blue-950"
                     >
                       {crumb.label}
                     </Link>

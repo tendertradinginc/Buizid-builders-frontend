@@ -147,7 +147,7 @@ const CreateClientFeedback = ({ setReload }) => {
 
             <Button
               type="submit"
-              className="mt-2 w-full rounded-sm bg-[#F78C40] p-1 px-3 font-semibold hover:text-black text-white hover:bg-[#f0b991]"
+              className="mt-2 w-full rounded-sm bg-blue-950 p-1 px-3 font-semibold hover:text-black text-white hover:bg-[#f0b991]"
               disabled={loading}
             >
               {loading ? "Submitting..." : "Submit"}

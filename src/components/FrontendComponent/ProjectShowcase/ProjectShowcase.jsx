@@ -28,19 +28,19 @@ const ProjectShowcase = async () => {
         <Tabs defaultValue="Completed" className="">
           <TabsList className="grid grid-cols-3 justify-center mb-24 max-w-max gap-2  rounded-full lg:border-2 border-[#F2DAB24D] py-2 h-max mx-auto ">
             <TabsTrigger
-              className="data-[state=active]:bg-[#F78C40] data-[state=active]:text-white text-sm md:text-xl rounded-full py-2.5 px-3 md:px-6 uppercase"
+              className="data-[state=active]:bg-blue-950 data-[state=active]:text-white text-sm md:text-xl rounded-full py-2.5 px-3 md:px-6 uppercase"
               value="Upcoming"
             >
               Upcoming
             </TabsTrigger>
             <TabsTrigger
-              className="data-[state=active]:bg-[#F78C40] data-[state=active]:text-white text-sm md:text-xl rounded-full py-2.5 px-3 md:px-6 uppercase"
+              className="data-[state=active]:bg-blue-950 data-[state=active]:text-white text-sm md:text-xl rounded-full py-2.5 px-3 md:px-6 uppercase"
               value="Completed"
             >
               Completed
             </TabsTrigger>
             <TabsTrigger
-              className="data-[state=active]:bg-[#F78C40] data-[state=active]:text-white text-sm md:text-xl rounded-full py-2.5 px-3 md:px-6 uppercase"
+              className="data-[state=active]:bg-blue-950 data-[state=active]:text-white text-sm md:text-xl rounded-full py-2.5 px-3 md:px-6 uppercase"
               value="ongoing"
             >
               Ongoing

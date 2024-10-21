@@ -48,12 +48,12 @@ const ProjectCard = ({ data }) => {
           </p>
           <Link className="block" href={`/projectShowcase/${_id}`}>
             <Button
-              className=" duration-200 mx-auto py-2.5 pl-6 pr-1 gap-4 justify-between rounded-full items-center   bg-[#F78C40]  text-white flex "
+              className=" duration-200 mx-auto py-2.5 pl-6 pr-1 gap-4 justify-between rounded-full items-center   bg-blue-950  text-white flex "
               variant="tti"
             >
               Explore Our Prujects{" "}
               <div className="p-1 rounded-full bg-white">
-                <FaArrowRightLong className="text-xl text-[#F78C40]" />
+                <FaArrowRightLong className="text-xl text-blue-950" />
               </div>
             </Button>
           </Link>
@@ -74,12 +74,12 @@ const ProjectCard = ({ data }) => {
           </p>
           <Link className="block" href={`/projectShowcase/${_id}`}>
             <Button
-              className=" duration-200 mx-auto py-2.5 pl-6 pr-1 gap-4 justify-between rounded-full items-center   bg-[#F78C40]  text-white flex "
+              className=" duration-200 mx-auto py-2.5 pl-6 pr-1 gap-4 justify-between rounded-full items-center   bg-blue-950  text-white flex "
               variant="tti"
             >
               Explore Our Prujects{" "}
               <div className="p-1 rounded-full bg-white">
-                <FaArrowRightLong className="text-xl text-[#F78C40]" />
+                <FaArrowRightLong className="text-xl text-blue-950" />
               </div>
             </Button>
           </Link>

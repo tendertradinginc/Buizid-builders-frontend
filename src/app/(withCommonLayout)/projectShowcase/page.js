@@ -14,7 +14,7 @@ export default function page() {
             <div className="text-center">
               <h2 className="text-xl lg:text-4xl">
                 PROJECTS
-                <span className="border-b-4 ml-2 border-[#F78C40]">
+                <span className="border-b-4 ml-2 border-blue-950">
                   SHOWCASE
                 </span>
               </h2>

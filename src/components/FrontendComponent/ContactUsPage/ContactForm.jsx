@@ -93,7 +93,7 @@ const ContactForm = () => {
                 name="message"
                 onChange={handleInputChange}
               ></textarea>
-              <Button type="submit" className="w-full hover:bg-[#F78C40]">
+              <Button type="submit" className="w-full hover:bg-blue-950">
                 Submit now
               </Button>
             </form>
@@ -120,11 +120,11 @@ const ContactForm = () => {
                   class="object-contain "
                 />
                 <p className="text-gray-700 font-medium mt-4 flex items-center gap-x-2">
-                  <IoLocationOutline className="text-[#F78C40]" />
+                  <IoLocationOutline className="text-blue-950" />
                   Dhanmondi 32, Dhaka-1205, Bangladesh
                 </p>
                 <p className="text-gray-600 flex items-center gap-x-2 my-2">
-                  <MdOutlineForwardToInbox className="text-[#F78C40]" />
+                  <MdOutlineForwardToInbox className="text-blue-950" />
 
                   <a
                     href="mailto:hellodclengbd@gmail.com"
@@ -134,7 +134,7 @@ const ContactForm = () => {
                   </a>
                 </p>
                 <p className="text-gray-600 flex items-center gap-x-2">
-                  <LuPhone className="text-[#F78C40]" />
+                  <LuPhone className="text-blue-950" />
                   <a href="tel:+8801705000000" className="underline">
                     +8801705-000000
                   </a>

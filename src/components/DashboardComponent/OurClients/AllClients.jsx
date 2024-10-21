@@ -84,11 +84,11 @@ const AllClients = () => {
           <br />
 
           <div className="mx-auto w-full max-w-screen-lg bg-white p-8">
-            <div className="overflow-x-auto sm:px-1">
+            <div className="overflow-x-auto sm:px-1 min-h-[60vh]">
               <div className="flex items-center justify-between pb-6">
-                <h2 className="text-2xl font-semibold text-[#F78C40]">
+                <h2 className="text-2xl font-semibold text-blue-950">
                   <AiFillDatabase className="mb-1 inline"></AiFillDatabase>
-                  Clients List
+                  Clients List - {totalClient}
                 </h2>
 
                 <div className="mt-4 flex items-center justify-between px-2">
@@ -104,7 +104,7 @@ const AllClients = () => {
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
                         <Button
-                          className="cursor-pointer rounded-lg border px-3 py-1 text-base font-semibold   duration-500  hover:bg-[#F78C40] hover:text-white text-black"
+                          className="cursor-pointer rounded-lg border px-3 py-1 text-base font-semibold   duration-500  hover:bg-blue-950 hover:text-white text-black"
                           variant="outline"
                         >
                           Create Client{" "}
@@ -118,7 +118,7 @@ const AllClients = () => {
                         <CreateClient setReload={setReload} />
 
                         <AlertDialogFooter>
-                          <AlertDialogCancel className="bg-blue-700 hover:bg-blue-300 text-white">
+                          <AlertDialogCancel className="bg-blue-950 hover:bg-blue-900 text-white hover:text-white">
                             Close
                           </AlertDialogCancel>
                         </AlertDialogFooter>
@@ -137,7 +137,7 @@ const AllClients = () => {
                 </div>
               ) : (
                 <table className="w-full table-auto">
-                  <thead className="bg-gradient-to-r from-[#F78C40] to-[#F78C40] text-white">
+                  <thead className="bg-blue-950 text-white">
                     <tr className="text-left">
                       <th className="px-4 py-2">No</th>
                       <th className="py-2 pl-36">Image</th>

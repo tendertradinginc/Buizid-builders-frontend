@@ -21,7 +21,7 @@ const ViewSuccessStory = ({ data }) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <button className=" bg-[#F78C40] hover:bg-[#eeb993] text-black font-bold py-1 px-4 rounded-full">
+        <button className=" bg-blue-950 hover:bg-[#eeb993] text-black font-bold py-1 px-4 rounded-full">
           View
         </button>
       </AlertDialogTrigger>
