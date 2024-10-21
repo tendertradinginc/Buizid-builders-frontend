@@ -47,7 +47,7 @@ const PaginationRaw = ({ data }) => {
   return (
     <div className="flex flex-col md:flex-row justify-between  items-center gap-y-8 my-3">
       <div className="flex gap-5">
-        <div className="font-semibold bg-blue-950 text-white btn hover:bg-blue-950 p-1 rounded-md">
+        <div className="font-semibold bg-[#003366] text-white btn hover:bg-[#003366] p-1 rounded-md">
           Current Page
           <select
             onChange={handlePagination}
@@ -60,14 +60,14 @@ const PaginationRaw = ({ data }) => {
               <option
                 key={page}
                 value={page}
-                className="border-none bg-blue-950"
+                className="border-none bg-[#003366]"
               >
                 {page}
               </option>
             ))}
           </select>
         </div>
-        <div className="font-semibold bg-blue-950 text-white btn hover:bg-blue-950 p-1 rounded-md">
+        <div className="font-semibold bg-[#003366] text-white btn hover:bg-[#003366] p-1 rounded-md">
           Content Per Page
           <select
             onChange={(e) => {
@@ -84,41 +84,41 @@ const PaginationRaw = ({ data }) => {
           >
             <option
               value={defaultPageLimit}
-              className="border-none bg-blue-950 inline-block"
+              className="border-none bg-[#003366] inline-block"
             >
               {defaultPageLimit}
             </option>
             <option
               value={50}
-              className={`border-none bg-blue-950  ${dataCount < 50 && "hidden"
+              className={`border-none bg-[#003366]  ${dataCount < 50 && "hidden"
                 }`}
             >
               50
             </option>
             <option
               value={100}
-              className={`border-none bg-blue-950 ${dataCount < 100 && "hidden"
+              className={`border-none bg-[#003366] ${dataCount < 100 && "hidden"
                 }`}
             >
               100
             </option>
             <option
               value={200}
-              className={`border-none bg-blue-950 ${dataCount < 200 && "hidden"
+              className={`border-none bg-[#003366] ${dataCount < 200 && "hidden"
                 }`}
             >
               200
             </option>
             <option
               value={500}
-              className={`border-none bg-blue-950 ${dataCount < 500 && "hidden"
+              className={`border-none bg-[#003366] ${dataCount < 500 && "hidden"
                 }`}
             >
               500
             </option>
             <option
               value={dataCount}
-              className={`border-none bg-blue-950 ${dataCount <= defaultPageLimit && "hidden"
+              className={`border-none bg-[#003366] ${dataCount <= defaultPageLimit && "hidden"
                 }`}
             >
               All
@@ -132,14 +132,14 @@ const PaginationRaw = ({ data }) => {
         {currentPage == 1 ? (
           <button
             disabled
-            className="btn border-none p-1 rounded-md flex items-center  gap-2 bg-white text-gray-500 hover:bg-white hover:text-gray-500 font-bold"
+            className="btn border-none p-1 px-2 rounded-md flex items-center  gap-2 bg-white text-gray-500 hover:bg-white hover:text-gray-500 font-bold"
             onClick={handlePreviousPage}
           >
             <FaAngleLeft className="text-gray-500 font-bold " /> Prev
           </button>
         ) : (
           <button
-            className="btn border-none p-1 rounded-md flex items-center gap-2 hover:bg-[#91aadf] bg-blue-950 text-base font-bold"
+            className="btn border-none p-1 px-2 rounded-md flex items-center gap-2 hover:bg-[#91aadf] bg-[#003366] text-white font-bold"
             onClick={handlePreviousPage}
           >
             <FaAngleLeft className="text-white font-bold" /> Prev
@@ -149,14 +149,14 @@ const PaginationRaw = ({ data }) => {
         {currentPage == totalPage ? (
           <button
             disabled
-            className="btn border-none p-1 rounded-md flex items-center gap-2 bg-white text-gray-500 hover:bg-white hover:text-gray-500 text-base font-bold"
+            className="btn border-none p-1 rounded-md flex px-2 items-center gap-2 bg-white text-gray-500 hover:bg-white hover:text-gray-500 text-base font-bold"
             onClick={handleNextPage}
           >
             Next <FaAngleRight className=" text-gray-500 font-bold" />
           </button>
         ) : (
           <button
-            className="btn border-none p-1 rounded-md flex items-center gap-2 hover:bg-[#91aadf] bg-blue-950 text-base font-bold"
+            className="btn border-none p-1 px-2  rounded-md flex items-center gap-2 hover:bg-[#91aadf] bg-[#003366] text-white font-bold"
             onClick={handleNextPage}
           >
             Next <FaAngleRight className=" text-white font-bold" />
