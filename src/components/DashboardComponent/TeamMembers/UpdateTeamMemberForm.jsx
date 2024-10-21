@@ -28,7 +28,7 @@ export default function UpdateTeamMemberForm({ memberId, setReload }) {
     const fetchMemberData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5002/api/v1/teamMember/${memberId}`
+          `http://localhost:5000/api/v1/teamMember/${memberId}`
         );
         setFormData(response.data.data);
       } catch (error) {
@@ -65,7 +65,7 @@ export default function UpdateTeamMemberForm({ memberId, setReload }) {
 
     try {
       const response = await axios.put(
-        `http://localhost:5002/api/v1/teamMember/${memberId}`,
+        `http://localhost:5000/api/v1/teamMember/${memberId}`,
         formData,
         {
           headers: {

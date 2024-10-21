@@ -23,7 +23,7 @@ const SingleBanner = ({ data, index, setReload }) => {
           <UpdateBanner setReload={setReload} data={data} />
           <DeleteDataModal
             setReload={setReload}
-            url={`http://localhost:5002/api/v1/bannerpage/${_id}`}
+            url={`http://localhost:5000/api/v1/bannerpage/${_id}`}
           />
         </AlertDialog>
       </td>

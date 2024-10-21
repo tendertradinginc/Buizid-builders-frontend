@@ -8,7 +8,7 @@ import { IoLocationOutline } from "react-icons/io5";
 
 const page = async ({ params }) => {
   const res = await fetch(
-    `http://localhost:5002/api/v1/projects/${params?.id}`,
+    `http://localhost:5000/api/v1/projects/${params?.id}`,
     {
       cache: "no-store",
     }

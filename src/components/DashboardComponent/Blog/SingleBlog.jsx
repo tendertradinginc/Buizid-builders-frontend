@@ -17,7 +17,7 @@ const SingleBlog = ({ data, index, setReload }) => {
           <BlogUpdate setReload={setReload} data={data} />
           <DeleteDataModal
             setReload={setReload}
-            url={`http://localhost:5002/api/v1/blogs/${data?._id}`}
+            url={`http://localhost:5000/api/v1/blogs/${data?._id}`}
           />
         </AlertDialog>
       </td>

@@ -58,7 +58,7 @@ const SingleFeedback = ({ clientFeedbackData, index, setReload }) => {
                     ></DeleteFeedback> */}
           <DeleteDataModal
             setReload={setReload}
-            url={`http://localhost:5002/api/v1/clientFeedback/${clientFeedbackData._id}`}
+            url={`http://localhost:5000/api/v1/clientFeedback/${clientFeedbackData._id}`}
           />
         </AlertDialog>
       </td>

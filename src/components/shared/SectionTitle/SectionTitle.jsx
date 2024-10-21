@@ -1,24 +1,8 @@
-import Image from "next/image";
-
-const SectionTitle = ({ title, imageLink, position, width, height }) => {
+const SectionTitle = ({ title, subTitle }) => {
   return (
-    <div className={`flex flex-col ${[position]} mb-12`}>
-      <div className="mb-5 z-10 ">
-        <Image
-          alt="our vision image"
-          height={height}
-          width={width}
-          className={`px-4 md:px-0 `}
-          src={imageLink}
-        ></Image>
-      </div>
-      <div className="flex items-center gap-3 -mt-14 ml-4">
-        {" "}
-        <p className="text-blue-950 inline-block text-center ml-4 font-bold text-lg">
-          {title}
-        </p>
-        <p className="h-1 w-16 bg-gradient-to-tr from-[#ffc1957e] to-blue-950"></p>
-      </div>
+    <div className="text-center font-bold pt-12 pb-24">
+      <h2 className="uppercase text-center text-[#003366] text-xl">{title}</h2>
+      <h3 className="text-4xl mt-4">{subTitle}</h3>
     </div>
   );
 };

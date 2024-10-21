@@ -20,7 +20,7 @@ const SingleProject = ({ data, index, setReload }) => {
 
           <DeleteDataModal
             setReload={setReload}
-            url={`http://localhost:5002/api/v1/projects/${data?._id}`}
+            url={`http://localhost:5000/api/v1/projects/${data?._id}`}
           />
         </AlertDialog>
       </td>

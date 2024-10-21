@@ -54,7 +54,7 @@ const Page = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5002/api/v1/service/get-all-dashboard-edition?page=${selectedPage}&limit=${selectedLimit}&search=${debouncedSearchTerm}`
+          `http://localhost:5000/api/v1/service/get-all-dashboard-edition?page=${selectedPage}&limit=${selectedLimit}&search=${debouncedSearchTerm}`
         );
 
         setData(response.data.data);
@@ -72,7 +72,7 @@ const Page = () => {
 
   const handleDelete = async (serviceId) => {
     try {
-      await axios.delete(`http://localhost:5002/api/v1/service/${serviceId}`);
+      await axios.delete(`http://localhost:5000/api/v1/service/${serviceId}`);
       toast.success("Service deleted successfully!");
       setReload((prev) => !prev);
     } catch (error) {

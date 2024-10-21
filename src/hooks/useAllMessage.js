@@ -12,7 +12,7 @@ const useAllMessage = (page, limit, searchValue) => {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:5002/api/v1/message?page=${page}&limit=${limit}&search=${searchValue}`
+          `http://localhost:5000/api/v1/message?page=${page}&limit=${limit}&search=${searchValue}`
         );
         const data = await response.json();
         setAllMessage(data?.data?.result);

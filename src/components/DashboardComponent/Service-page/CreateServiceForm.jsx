@@ -67,7 +67,7 @@ export default function CreateServiceForm({ setReload }) {
       };
 
       const response = await axios.post(
-        "http://localhost:5002/api/v1/service",
+        "http://localhost:5000/api/v1/service",
         dataToSend,
         {
           headers: {

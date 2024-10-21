@@ -49,7 +49,7 @@ const BlogCreateButton = ({ setReload }) => {
       const blogData = { ...formData, image: imageUrl };
 
       const response = await fetch(
-        "http://localhost:5002/api/v1/blogs/create-blog",
+        "http://localhost:5000/api/v1/blogs/create-blog",
         {
           method: "POST",
           headers: {

@@ -54,7 +54,7 @@ const Page = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5002/api/v1/teamMember?page=${selectedPage}&limit=${selectedLimit}&search=${debouncedSearchTerm}`
+          `http://localhost:5000/api/v1/teamMember?page=${selectedPage}&limit=${selectedLimit}&search=${debouncedSearchTerm}`
         );
         setData(response.data.data);
         setMetadata(response.data.metadata);
@@ -72,7 +72,7 @@ const Page = () => {
   const handleDelete = async (teamMemberId) => {
     try {
       await axios.delete(
-        `http://localhost:5002/api/v1/teamMember/${teamMemberId}`
+        `http://localhost:5000/api/v1/teamMember/${teamMemberId}`
       );
       toast.success("Team member deleted successfully!");
       setReload((prev) => !prev);

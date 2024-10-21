@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const page = async () => {
-  const res = await fetch("http://localhost:5002/api/v1/blogs", {
+  const res = await fetch("http://localhost:5000/api/v1/blogs", {
     cache: "no-store",
   });
   const data = await res.json();

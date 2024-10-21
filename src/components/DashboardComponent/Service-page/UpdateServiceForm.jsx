@@ -27,7 +27,7 @@ export default function UpdateServiceForm({ serviceId, setReload }) {
     const fetchServiceData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5002/api/v1/service/${serviceId}`
+          `http://localhost:5000/api/v1/service/${serviceId}`
         );
         setFormData(response.data.data);
       } catch (error) {
@@ -72,7 +72,7 @@ export default function UpdateServiceForm({ serviceId, setReload }) {
 
     try {
       const response = await axios.put(
-        `http://localhost:5002/api/v1/service/${serviceId}`,
+        `http://localhost:5000/api/v1/service/${serviceId}`,
         formData,
         {
           headers: {

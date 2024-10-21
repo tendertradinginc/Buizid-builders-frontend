@@ -63,7 +63,7 @@ const ProjectCreateModal = ({ setReload }) => {
       const projectData = { ...formData, image: imageUrl, category };
 
       const response = await fetch(
-        "http://localhost:5002/api/v1/projects/create-project",
+        "http://localhost:5000/api/v1/projects/create-project",
         {
           method: "POST",
           headers: {

@@ -31,7 +31,7 @@ export function CategoryCombobox({ category, setCategory }) {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          "http://localhost:5002/api/v1/category/get-all-dashboard-edition"
+          "http://localhost:5000/api/v1/category/get-all-dashboard-edition"
         );
         setCategories(response.data.data);
         setIsLoading(false);

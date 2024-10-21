@@ -10,7 +10,7 @@ const Summary = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5002/api/v1/homepage/summary`
+          `http://localhost:5000/api/v1/homepage/summary`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

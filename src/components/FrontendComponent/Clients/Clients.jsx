@@ -3,7 +3,7 @@ import Image from "next/image";
 import MaxWidthWrapper from "../../custom/MaxWidthWrapper";
 
 const Clients = async () => {
-  const res = await fetch(`http://localhost:5002/api/v1/client`, {
+  const res = await fetch(`http://localhost:5000/api/v1/client`, {
     cache: "no-store",
   });
   const data = await res.json();
