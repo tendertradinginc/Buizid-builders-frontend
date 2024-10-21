@@ -26,6 +26,10 @@ const ProductPage = () => {
 
   return (
     <div className="py-20 container mx-auto">
+      <div className="text-center space-y-2 mt-10">
+        <h3 className="text-[#003366] font-semibold text-xl">OUR PRODUCT</h3>
+        <h1 className="text-[#0E0E0E] text-4xl font-bold">We Are provide Some Qualityful  Product</h1>
+      </div>
       <div className="flex gap-5 flex-wrap md:flex-nowrap my-16">
         <Input onChange={(e)=> setSearch(e.target.value)} type="text" className="border border-[#003366]" />{" "}
         <Select onValueChange={(value)=> setCategory(value)} className="bg-transparent ">
