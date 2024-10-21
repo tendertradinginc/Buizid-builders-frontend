@@ -1,17 +1,50 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import useAllProducts from "@/hooks/useAllProducts";
 import { customLoader } from "@/utils/customLoader";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const ProductPage = () => {
-  const { products, setLoading, loading } = useAllProducts(1, 12);
+  const [search, setSearch] = useState("")
+  const [category, setCategory] = useState("")
+  const { products, setLoading, loading } = useAllProducts("", "", search, category);
+
+
 
   return (
     <div className="py-20 container mx-auto">
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="flex gap-5 flex-wrap md:flex-nowrap my-16">
+        <Input onChange={(e)=> setSearch(e.target.value)} type="text" className="border border-[#003366]" />{" "}
+        <Select onValueChange={(value)=> setCategory(value)} className="bg-transparent ">
+          <SelectTrigger className="bg-transparent max-w-sm border border-[#003366] h-[37px]">
+            <SelectValue placeholder="Select a fruit" />
+          </SelectTrigger>
+          <SelectContent >
+            <SelectGroup>
+              <SelectLabel>Fruits</SelectLabel>
+              <SelectItem value="apple">Apple</SelectItem>
+              <SelectItem value="banana">Banana</SelectItem>
+              <SelectItem value="blueberry">Blueberry</SelectItem>
+              <SelectItem value="grapes">Grapes</SelectItem>
+              <SelectItem value="pineapple">Pineapple</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>{" "}
+      </div>
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
         {products?.map((item) => (
           <div className="bg-white" key={item?._id}>
             <Image
