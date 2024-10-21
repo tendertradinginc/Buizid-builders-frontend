@@ -1,44 +1,33 @@
 import ContactForm from "@/components/FrontendComponent/ContactUsPage/ContactForm";
-import PageBanner from "@/components/shared/PageBanner/PageBanner";
-import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
 
 const Contact = () => {
   return (
-    <div className="">
-      <div>
-        <PageBanner
-          title="Contact Us"
-          description=""
-          banner="/contactusBanner.png"
-        ></PageBanner>
-      </div>
-
-      <section class="bg-white relative py-16 md:py-32 w-full rounded-lg overflow-hidden">
-        <div class="absolute bottom-[-50%] left-[-50%] md:left-[-20%] lg:left-[-20%] xl:left-[-10%] w-[450px] h-[450px] bg-gradient-to-tr from-red-200 to-transparent rounded-full blur-md"></div>
-
-        <div class="absolute top-[-50%] right-[-50%] md:right-[-30%] lg:right-[-20%] xl:right-[-10%] w-[450px] h-[450px] bg-gradient-to-tr from-transparent to-red-200 rounded-full blur-md"></div>
-
-        <SectionTitle
-          title={"Contact Us"}
-          imageLink={"/COUNTACT.png"}
-          position={"items-center"}
-          width={637}
-          height={64}
-        ></SectionTitle>
-
-        <div className="text-2xl md:text-5xl font-bold mb-2 text-center">
-          <h2> {`WE'D`} LOVE TO HEAR FROM</h2>
-          <div className="inline-block mt-2">
-            <span className="">YOU</span>
-            <hr className="border-t-8 border-t-blue-950 mt-[-8px]" />
-          </div>
+    <div className=" bg-white ">
+      <section class=" py-16 md:py-32 w-full rounded-lg container mx-auto">
+        <div className="text-center font-bold">
+          <h2 className="uppercase text-center text-[#003366] text-xl">
+            Contact Us
+          </h2>
+          <h3 className="text-4xl mt-4">We’d Love To Hear From You</h3>
         </div>
-
-        <p className="text-gray-500 md:text-lg max-w-4xl mx-auto text-center">
-          Focusing on medium to large-scale commercial construction projects, we
-          work with both investors and developers to create landmarks that make
-          an impact.
-        </p>
+        <div className="mt-16">
+          <p className="text-gray-500 md:text-lg   mx-auto text-center">
+            Many desktop publishing packages and web page editors now use Lorem
+            Ipsum as their default model text, and a search for ‘lorem ipsum’
+            will uncover many web sites still in their infancy. Various versions
+            have evolved over the years, sometimes by accident, sometimes on
+            purpose. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged.
+          </p>
+          <p className="text-gray-500 md:text-lg  mx-auto text-center mt-8">
+            Many desktop publishing packages and web page editors now use Lorem
+            Ipsum as their default model text, and a search for ‘lorem ipsum’
+            will uncover many web sites still in their infancy. Various versions
+            have evolved over the years, sometimes by accident, sometimes on
+            purpose. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged.
+          </p>
+        </div>
       </section>
       <section className="bg-white">
         <ContactForm />
