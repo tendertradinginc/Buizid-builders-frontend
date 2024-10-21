@@ -13,7 +13,8 @@ const NavItems = ({ className }) => {
     { id: 4, url: "/projectShowcase", label: "Project Showcase" },
     { id: 6, url: "/blogs", label: "Blog" },
     { id: 8, url: "/contactUs", label: "Contact Us" },
-    { id: 9, url: "/dashboard", label: "Dashboard" },
+    { id: 9, url: "/aboutUs", label: "About Us" },
+    { id: 10, url: "/dashboard", label: "Dashboard" },
   ];
 
   return (
