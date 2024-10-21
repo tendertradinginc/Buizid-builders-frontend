@@ -1,6 +1,8 @@
 "use client";
+import PaginationRaw from "@/components/shared/pagination/PaginationRaw";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { FaSearch } from "react-icons/fa";
+
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -18,25 +20,42 @@ import Link from "next/link";
 import { useState } from "react";
 
 const ProductPage = () => {
-  const [search, setSearch] = useState("")
-  const [category, setCategory] = useState("")
-  const { products, setLoading, loading } = useAllProducts("", "", search, category);
-
-
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageLimit, setPageLimit] = useState(12);
+  const { products, setLoading, loading, productsCount } = useAllProducts(
+    currentPage,
+    pageLimit,
+    search,
+    category
+  );
 
   return (
     <div className="py-20 container mx-auto">
       <div className="text-center space-y-2 mt-10">
         <h3 className="text-[#003366] font-semibold text-xl">OUR PRODUCT</h3>
-        <h1 className="text-[#0E0E0E] text-4xl font-bold">We Are provide Some Qualityful  Product</h1>
+        <h1 className="text-[#0E0E0E] text-4xl font-bold">
+          We Are provide Some Qualityful Product
+        </h1>
       </div>
       <div className="flex gap-5 flex-wrap md:flex-nowrap my-16">
-        <Input onChange={(e)=> setSearch(e.target.value)} type="text" className="border border-[#003366]" />{" "}
-        <Select onValueChange={(value)=> setCategory(value)} className="bg-transparent ">
+        <div className="flex-1 relative">
+          <Input
+            onChange={(e) => setSearch(e.target.value)}
+            type="text"
+            className="border border-[#003366]"
+          />{" "}
+          <FaSearch className="absolute top-2.5 right-2 text-[#003366]" />
+        </div>
+        <Select
+          onValueChange={(value) => setCategory(value)}
+          className="bg-transparent "
+        >
           <SelectTrigger className="bg-transparent max-w-sm border border-[#003366] h-[37px]">
             <SelectValue placeholder="Select a fruit" />
           </SelectTrigger>
-          <SelectContent >
+          <SelectContent>
             <SelectGroup>
               <SelectLabel>Fruits</SelectLabel>
               <SelectItem value="apple">Apple</SelectItem>
@@ -83,6 +102,18 @@ const ProductPage = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="mt-12">
+        <PaginationRaw
+          data={{
+            setCurrentPage,
+            dataCount: productsCount,
+            currentPage,
+            pageLimit,
+            setPageLimit,
+            defaultPageLimit: 12,
+          }}
+        />
       </div>
     </div>
   );

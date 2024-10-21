@@ -15,7 +15,6 @@ const useAllProducts = (page, limit, searchValue, category) => {
           `http://localhost:5000/api/v1/products?page=${page}&limit=${limit}&search=${searchValue}&category=${category}`
         );
         const data = await response.json();
-        console.log(data.data);
         setProducts(data?.data?.result);
 
         setProductsCount(data?.data?.total);
