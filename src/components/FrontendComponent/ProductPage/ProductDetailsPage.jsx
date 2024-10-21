@@ -109,6 +109,26 @@ const ProductDetailsPage = ({ data }) => {
           </div>
         </div>
       </div>
+
+      <div className="mt-10">
+        <h1 className="text-[#0E0E0E] font-semibold text-2xl">
+          Product Details
+        </h1>
+        <p className="whitespace-break-spaces mt-3 text-justify">{data?.shortDescription}</p>
+      </div>
+      <div>
+        <Image
+          src={data?.image?.[0]}
+          alt={data?.name}
+          height={400}
+          width={1000}
+          className="h-[200px] md:h-[300px] lg:h-[500px] w-full object-cover my-12"
+        />
+        
+      </div>
+      <p className="whitespace-break-spaces mt-3 text-justify">
+        {data?.fullDescription}
+      </p>
     </div>
   );
 };
