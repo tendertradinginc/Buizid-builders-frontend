@@ -10,9 +10,6 @@ const WhyChooseUs = () => {
 
 
 
-
-
-
     return (
         <div className="mt-10 ">
             <section>
@@ -92,8 +89,6 @@ const WhyChooseUs = () => {
                     </Tabs>
                 </div>
             </section>
-
-
         </div>
     );
 };
