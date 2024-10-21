@@ -20,7 +20,7 @@ const DeleteFeedback = ({ data, setReload }) => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:5002/api/v1/clientFeedback/${id}`
+        `http://localhost:5000/api/v1/clientFeedback/${id}`
       );
       if (response.status === 200) {
         setIsOpen(false);

@@ -65,7 +65,7 @@ const ProductCreateModal = ({ setReload }) => {
       const projectData = { ...formData, image: imageUrl, category };
       console.log(projectData);
       const response = await fetch(
-        "http://localhost:5002/api/v1/products/create",
+        "http://localhost:5000/api/v1/products/create",
         {
           method: "POST",
           headers: {

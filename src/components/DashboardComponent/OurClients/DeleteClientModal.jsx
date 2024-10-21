@@ -20,7 +20,7 @@ const DeleteClientModal = ({ data, setReload }) => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:5002/api/v1/client/${id}`
+        `http://localhost:5000/api/v1/client/${id}`
       );
       if (response.status === 200) {
         setIsOpen(false);

@@ -4,7 +4,7 @@ export async function signUpUser(pre, fromData) {
   try {
     const formattedData = JSON.stringify(Object.fromEntries(fromData));
 
-    const res = await fetch(`http://localhost:5002/api/v1/users/createuser`, {
+    const res = await fetch(`http://localhost:5000/api/v1/users/createuser`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -22,7 +22,7 @@ export async function loginUser(pre, fromData) {
   try {
     const formattedData = JSON.stringify(Object.fromEntries(fromData));
 
-    const res = await fetch(`http://localhost:5002/api/v1/users/login`, {
+    const res = await fetch(`http://localhost:5000/api/v1/users/login`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

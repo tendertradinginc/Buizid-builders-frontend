@@ -44,7 +44,7 @@ const EditClientModal = ({ data, setReload }) => {
       };
 
       const response = await fetch(
-        `http://localhost:5002/api/v1/client/${_id}`,
+        `http://localhost:5000/api/v1/client/${_id}`,
         {
           method: "PUT",
           headers: {

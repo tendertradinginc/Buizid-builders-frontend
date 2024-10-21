@@ -5,7 +5,7 @@ import MaxWidthWrapper from "@/components/custom/MaxWidthWrapper";
 import ProjectSlide from "./ProjectSlide";
 
 const ProjectShowcase = async () => {
-  const res = await fetch("http://localhost:5002/api/v1/projects", {
+  const res = await fetch("http://localhost:5000/api/v1/projects", {
     cache: "no-store",
   });
   const data = await res.json();

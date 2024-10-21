@@ -19,7 +19,7 @@ const SingleProduct = ({ data, index, setReload }) => {
 
           <DeleteDataModal
             setReload={setReload}
-            url={`http://localhost:5002/api/v1/products/${data?._id}`}
+            url={`http://localhost:5000/api/v1/products/${data?._id}`}
           />
         </AlertDialog>
       </td>

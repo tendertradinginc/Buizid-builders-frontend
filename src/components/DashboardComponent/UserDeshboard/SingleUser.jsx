@@ -15,7 +15,7 @@ const SingleUser = ({ data, index, setReload }) => {
           <EditUser setReload={setReload} data={data} />
           <DeleteDataModal
             setReload={setReload}
-            url={`http://localhost:5002/api/v1/users/${data?._id}`}
+            url={`http://localhost:5000/api/v1/users/${data?._id}`}
           />
         </AlertDialog>
       </td>

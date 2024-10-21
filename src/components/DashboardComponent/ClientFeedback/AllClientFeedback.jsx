@@ -35,7 +35,7 @@ const AllClientFeedback = () => {
       try {
         // Fetch data from the backend, passing search query if it exists
         const response = await fetch(
-          `http://localhost:5002/api/v1/clientFeedback?page=${page}&limit=${limit}`
+          `http://localhost:5000/api/v1/clientFeedback?page=${page}&limit=${limit}`
         );
         const data = await response.json();
 

@@ -22,7 +22,7 @@ export default function UpdateCategoryForm({ categoryId, setReload }) {
     const fetchCategoryData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5002/api/v1/category/${categoryId}`
+          `http://localhost:5000/api/v1/category/${categoryId}`
         );
         setFormData(response?.data?.data);
       } catch (error) {
@@ -62,7 +62,7 @@ export default function UpdateCategoryForm({ categoryId, setReload }) {
 
     try {
       const response = await axios.put(
-        `http://localhost:5002/api/v1/category/${categoryId}`,
+        `http://localhost:5000/api/v1/category/${categoryId}`,
         formData
       );
 

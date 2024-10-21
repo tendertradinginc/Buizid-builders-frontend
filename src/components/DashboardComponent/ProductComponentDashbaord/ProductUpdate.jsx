@@ -82,7 +82,7 @@ const ProductUpdate = ({ data, setReload }) => {
       };
 
       const response = await fetch(
-        `http://localhost:5002/api/v1/products/${_id}`,
+        `http://localhost:5000/api/v1/products/${_id}`,
         {
           method: "PUT",
           headers: {

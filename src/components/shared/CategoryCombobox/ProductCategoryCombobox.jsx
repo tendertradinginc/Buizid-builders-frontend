@@ -15,7 +15,7 @@ export function ProductCategoryCombobox({
     const getCategories = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5002/api/v1/category/${apiEndPoint}`
+          `http://localhost:5000/api/v1/category/${apiEndPoint}`
         );
 
         setCategories(res.data.data);

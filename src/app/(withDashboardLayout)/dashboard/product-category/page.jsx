@@ -52,7 +52,7 @@ const Page = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5002/api/v1/category/get-all-dashboard-edition?page=${selectedPage}&limit=${selectedLimit}&search=${debouncedSearchTerm}`
+          `http://localhost:5000/api/v1/category/get-all-dashboard-edition?page=${selectedPage}&limit=${selectedLimit}&search=${debouncedSearchTerm}`
         );
         setData(response.data.data);
         setMetadata(response.data.metadata);
@@ -88,7 +88,7 @@ const Page = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5002/api/v1/category/${id}`);
+      await axios.delete(`http://localhost:5000/api/v1/category/${id}`);
       toast.success("Category Deleted Successfully!");
       setReload((prev) => prev + 1);
     } catch (error) {

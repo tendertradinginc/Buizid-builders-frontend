@@ -26,7 +26,7 @@ const SingleMessage = ({ data, index, setReload, handelReadMessage }) => {
         <AlertDialog className="flex gap-3">
           <DeleteDataModal
             setReload={setReload}
-            url={`http://localhost:5002/api/v1/message/${data?._id}`}
+            url={`http://localhost:5000/api/v1/message/${data?._id}`}
           />
         </AlertDialog>
       </td>

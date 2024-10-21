@@ -55,7 +55,7 @@ const CreateClient = ({ setReload }) => {
       };
 
       const response = await fetch(
-        "http://localhost:5002/api/v1/client/create",
+        "http://localhost:5000/api/v1/client/create",
         {
           method: "POST",
           headers: {

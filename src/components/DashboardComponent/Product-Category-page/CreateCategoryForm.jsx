@@ -45,7 +45,7 @@ export default function CreateCategoryForm({ setReload }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:5002/api/v1/category",
+        "http://localhost:5000/api/v1/category",
         formData
       );
 

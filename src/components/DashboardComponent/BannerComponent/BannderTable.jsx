@@ -20,7 +20,7 @@ const BannderTable = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:5002/api/v1/bannerpage?page=${currentPage}&limit=${pageLimit}`
+          `http://localhost:5000/api/v1/bannerpage?page=${currentPage}&limit=${pageLimit}`
         );
         const data = await response.json();
         setBanner(data?.data?.result);

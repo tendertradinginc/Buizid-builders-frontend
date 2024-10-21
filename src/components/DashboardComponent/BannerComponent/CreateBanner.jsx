@@ -54,7 +54,7 @@ const CreateBanner = ({ setReload }) => {
       const imageUrl = await uploadImageToImgBB(imageFile);
       const bannerData = { ...formData, backgroundImage: imageUrl };
 
-      const response = await fetch("http://localhost:5002/api/v1/bannerpage", {
+      const response = await fetch("http://localhost:5000/api/v1/bannerpage", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

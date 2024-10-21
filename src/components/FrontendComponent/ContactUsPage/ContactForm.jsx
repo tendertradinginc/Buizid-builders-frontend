@@ -25,7 +25,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5002/api/v1/message", {
+      const response = await fetch("http://localhost:5000/api/v1/message", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
