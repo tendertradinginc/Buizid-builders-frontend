@@ -258,7 +258,7 @@ const EditSuccessStory = ({ data, setReload }) => {
                     className="mx-auto w-8 text-center"
                   />
                 ) : (
-                  <span className="px-8 text-sm bg-[#F78C40] text-white py-1 rounded-md">
+                  <span className="px-8 text-sm bg-blue-950 text-white py-1 rounded-md">
                     Submit
                   </span>
                 )}

@@ -88,7 +88,7 @@ const AllClientFeedback = () => {
           <div className="mx-auto w-full max-w-screen-lg bg-white p-8">
             <div className="overflow-x-auto sm:px-1">
               <div className="flex items-center justify-between pb-6">
-                <h2 className="text-2xl font-semibold text-[#F78C40]">
+                <h2 className="text-2xl font-semibold text-blue-950">
                   <AiFillDatabase className="mb-1 inline" />
                   Client Feedback List
                 </h2>
@@ -105,7 +105,7 @@ const AllClientFeedback = () => {
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
                         <Button
-                          className="cursor-pointer rounded-lg border bg-secondary px-3 py-1 text-base font-semibold hover:text-white duration-500 hover:bg-[#F78C40] text-black"
+                          className="cursor-pointer rounded-lg border bg-secondary px-3 py-1 text-base font-semibold hover:text-white duration-500 hover:bg-blue-950 text-black"
                           variant="outline"
                         >
                           Create Client Feedback{" "}
@@ -138,7 +138,7 @@ const AllClientFeedback = () => {
                 </div>
               ) : (
                 <table className="w-full table-auto">
-                  <thead className="bg-gradient-to-r from-[#F78C40] to-[#F78C40] text-white">
+                  <thead className="bg-gradient-to-r from-blue-950 to-blue-950 text-white">
                     <tr className="text-left">
                       <th className="px-4 py-2">No</th>
                       <th className="py-2 pl-8">Author</th>

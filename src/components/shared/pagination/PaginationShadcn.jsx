@@ -20,7 +20,7 @@ const PaginationBlog = ({ data }) => {
         <PaginationItem>
           <PaginationPrevious
             className={`${
-              pageNumber <= 1 ? "bg-secondary" : "bg-[#F78C40] text-white"
+              pageNumber <= 1 ? "bg-secondary" : "bg-blue-950 text-white"
             }`}
             href={`?page=${page > 1 ? page - 1 : 1}&limit=${limit}`}
           />
@@ -63,7 +63,7 @@ const PaginationBlog = ({ data }) => {
             className={`${
               totalPage <= pageNumber
                 ? "bg-secondary"
-                : "bg-[#F78C40] text-white"
+                : "bg-blue-950 text-white"
             }`}
             href={`?page=${
               totalPage <= Number(page) ? page : Number(page) + 1

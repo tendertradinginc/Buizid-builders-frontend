@@ -214,7 +214,7 @@ const CreateSuccessStory = ({ setReload }) => {
             <div className="mt-6">
               <Button
                 type="submit"
-                className="w-full rounded-sm bg-secondary p-2 px-4 font-semibold text-white hover:text-black bg-[#F78C40]  hover:bg-[#e7b794]"
+                className="w-full rounded-sm bg-secondary p-2 px-4 font-semibold text-white hover:text-black bg-blue-950  hover:bg-[#e7b794]"
                 disabled={loading}
               >
                 {loading ? "Submitting..." : "Submit"}

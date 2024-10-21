@@ -34,7 +34,7 @@ const page = async () => {
                 </p>
                 <Link href={`/blogs/${blogs[0]?._id}`}>
                   {" "}
-                  <button className="mt-4 rounded-sm py-2 px-8 font-semibold text-white duration-200 bg-[#0A2F4D]  hover:bg-[#F78C40]">
+                  <button className="mt-4 rounded-sm py-2 px-8 font-semibold text-white duration-200 bg-[#0A2F4D]  hover:bg-blue-950">
                     Read More
                   </button>
                 </Link>
@@ -65,7 +65,7 @@ const page = async () => {
                     </p>
                     <Link href={`/blogs/${item?._id}`}>
                       {" "}
-                      <button className="mt-4 rounded-sm bg-[#0A2F4D]  hover:bg-[#F78C40] py-2 px-8 font-semibold text-white duration-200  ">
+                      <button className="mt-4 rounded-sm bg-[#0A2F4D]  hover:bg-blue-950 py-2 px-8 font-semibold text-white duration-200  ">
                         Read More
                       </button>
                     </Link>
@@ -95,7 +95,7 @@ const page = async () => {
                   </p>
                   <Link href={`/blogs/${item?._id}`}>
                     {" "}
-                    <button className="mt-4 rounded-sm  py-2 px-8 font-semibold text-white duration-200 bg-[#0A2F4D]  hover:bg-[#F78C40]">
+                    <button className="mt-4 rounded-sm  py-2 px-8 font-semibold text-white duration-200 bg-[#0A2F4D]  hover:bg-blue-950">
                       Read More
                     </button>
                   </Link>

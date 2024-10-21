@@ -140,7 +140,7 @@ const EditClientModal = ({ data, setReload }) => {
             <div className="">
               <div
                 className={`flex h-10 items-center justify-center rounded font-semibold  hover:text-white text-black ${
-                  isDisbaled ? "bg-secondary" : "bg-[#F78C40]"
+                  isDisbaled ? "bg-secondary" : "bg-blue-950"
                 }`}
               >
                 <button className=" ">

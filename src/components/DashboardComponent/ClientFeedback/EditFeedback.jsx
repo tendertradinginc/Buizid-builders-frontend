@@ -158,7 +158,7 @@ const EditFeedback = ({ data, setReload }) => {
                 disabled={isDisabled || loading}
                 type="submit"
                 className={`flex h-10 items-center justify-center rounded font-semibold text-white hover:text-black ${
-                  isDisabled ? "bg-secondary" : "bg-[#F78C40]"
+                  isDisabled ? "bg-secondary" : "bg-blue-950"
                 }`}
               >
                 {loading ? (
@@ -171,7 +171,7 @@ const EditFeedback = ({ data, setReload }) => {
                     className="mx-auto w-8 text-center"
                   />
                 ) : (
-                  <span className="px-8 text-sm bg-[#F78C40] hover:bg-[#f0ac7c] hover:text-black text-white py-1 rounded-md">
+                  <span className="px-8 text-sm bg-blue-950 hover:bg-[#f0ac7c] hover:text-black text-white py-1 rounded-md">
                     Submit
                   </span>
                 )}

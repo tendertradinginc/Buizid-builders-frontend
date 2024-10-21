@@ -10,7 +10,7 @@ const PaginationSSR = ({ page, limit, totalPage, onPageChange }) => {
             key={i}
             className={`mx-1 px-3 py-1 rounded border ${
               pageNumber === i
-                ? "border-[#F78C40] bg-[#F78C40] text-white"
+                ? "border-blue-950 bg-blue-950 text-white"
                 : "border-gray-300 text-gray-700 hover:bg-gray-100"
             }`}
             onClick={() => onPageChange(i)}
@@ -26,7 +26,7 @@ const PaginationSSR = ({ page, limit, totalPage, onPageChange }) => {
             key={i}
             className={`mx-1 px-3 py-1 rounded border ${
               pageNumber === i
-                ? "border-[#F78C40] bg-[#F78C40] text-white"
+                ? "border-blue-950 bg-blue-950 text-white"
                 : "border-gray-300 text-gray-700 hover:bg-gray-100"
             }`}
             onClick={() => onPageChange(i)}
@@ -47,7 +47,7 @@ const PaginationSSR = ({ page, limit, totalPage, onPageChange }) => {
           key={totalPage}
           className={`mx-1 px-3 py-1 rounded border ${
             pageNumber === totalPage
-              ? "border-[#F78C40] bg-[#F78C40] text-white"
+              ? "border-blue-950 bg-blue-950 text-white"
               : "border-gray-300 text-gray-700 hover:bg-gray-100"
           }`}
           onClick={() => onPageChange(totalPage)}
@@ -65,7 +65,7 @@ const PaginationSSR = ({ page, limit, totalPage, onPageChange }) => {
         className={`mx-1 px-3 py-1 rounded border ${
           pageNumber <= 1
             ? "border-gray-300 bg-gray-200 text-gray-500 cursor-not-allowed"
-            : "border-[#F78C40] text-[#F78C40] hover:bg-[#F78C40] hover:text-white duration-200"
+            : "border-blue-950 text-blue-950 hover:bg-blue-950 hover:text-white duration-200"
         } `}
         onClick={() => onPageChange(pageNumber > 1 ? pageNumber - 1 : 1)}
         disabled={pageNumber <= 1}
@@ -77,7 +77,7 @@ const PaginationSSR = ({ page, limit, totalPage, onPageChange }) => {
         className={`mx-1 px-3 py-1 rounded border ${
           totalPage <= pageNumber
             ? "border-gray-300 bg-gray-200 text-gray-500 cursor-not-allowed"
-            : "border-[#F78C40] text-[#F78C40] hover:bg-[#F78C40] hover:text-white duration-200"
+            : "border-blue-950 text-blue-950 hover:bg-blue-950 hover:text-white duration-200"
         }`}
         onClick={() =>
           onPageChange(totalPage > pageNumber ? pageNumber + 1 : totalPage)

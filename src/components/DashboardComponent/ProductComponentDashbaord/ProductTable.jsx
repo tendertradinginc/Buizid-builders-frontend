@@ -2,22 +2,19 @@
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { AiFillDatabase } from "react-icons/ai";
-// import PaginationBlog from "../../shared/pagination/PaginationShadcn";
-// import BlogCreateButton from "./BlogCreateButton";
-// import SingleBlog from "./SingleBlog";
 
 import PaginationRaw from "@/components/shared/pagination/PaginationRaw";
-import useAllProjects from "@/hooks/useAllProducts";
-import ProjectCreateModal from "./ProjectCreateModal";
-import SingleProject from "./SingleProject";
+import useAllProducts from "@/hooks/useAllProducts";
+import ProductCreateModal from "./ProductCreateModal";
+import SingleProduct from "./SingleProduct";
 
-const ProjectTable = () => {
+const ProductTable = () => {
   const searchParams = useSearchParams();
   const [currentPage, setCurrentPage] = useState(searchParams.get("page") || 1);
   const [pageLimit, setPageLimit] = useState(searchParams.get("limit") || 10);
   const [searchValue, setSearchValue] = useState("");
 
-  const { projects, setReload, projectsCount, loading } = useAllProjects(
+  const { products, setReload, productsCount, loading } = useAllProducts(
     currentPage,
     pageLimit,
     searchValue
@@ -42,7 +39,7 @@ const ProjectTable = () => {
                   className="border rounded-md"
                   onChange={(e) => setSearchValue(e.target.value)}
                 />{" "}
-                <ProjectCreateModal setReload={setReload} />
+                <ProductCreateModal setReload={setReload} />
               </div>
             </div>
             <hr />
@@ -52,20 +49,21 @@ const ProjectTable = () => {
                 <thead className="border-2 border-gray-700 text-white bg-gray-700">
                   <tr className="">
                     <th className="px-4 py-2">No</th>
-                    <th className="px-4 py-2 text-left">Title</th>
+                    <th className="px-4 py-2 text-center">Title</th>
+                    <th className="px-4 py-2 text-center">Featured</th>
                     <th className="px-4 py-2">Actions</th>
                   </tr>
                 </thead>
 
                 <tbody className="border text-center">
-                  {projects?.length > 0
-                    ? projects?.map((project, index) => (
-                        <SingleProject
+                  {products?.length > 0
+                    ? products?.map((project, index) => (
+                        <SingleProduct
                           key={index}
                           index={index}
                           data={project}
                           setReload={setReload}
-                        ></SingleProject>
+                        ></SingleProduct>
                       ))
                     : Array.from({ length: 10 }).map((_, idx) => (
                         <tr
@@ -86,7 +84,7 @@ const ProjectTable = () => {
               <PaginationRaw
                 data={{
                   setCurrentPage,
-                  dataCount: projectsCount,
+                  dataCount: productsCount,
                   currentPage,
                   pageLimit,
                   setPageLimit,
@@ -101,4 +99,4 @@ const ProjectTable = () => {
   );
 };
 
-export default ProjectTable;
+export default ProductTable;

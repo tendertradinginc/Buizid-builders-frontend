@@ -27,19 +27,19 @@ const ProjectShowcases = async () => {
           <TabsList className="grid grid-cols-3 rounded-full gap-x-1 bg-gray-100 border max-w-lg h-14 mx-auto px-4 ">
             <TabsTrigger
               value="Commercial"
-              className="rounded-full px-4 py-2 text-sm font-semibold focus:outline-none transition duration-300 ease-in-out hover:bg-orange-200 data-[state=active]:bg-[#F78C40] data-[state=active]:text-white uppercase"
+              className="rounded-full px-4 py-2 text-sm font-semibold focus:outline-none transition duration-300 ease-in-out hover:bg-orange-200 data-[state=active]:bg-blue-950 data-[state=active]:text-white uppercase"
             >
               Upcoming
             </TabsTrigger>
             <TabsTrigger
               value="Construction"
-              className="rounded-full px-4 py-2 text-sm font-semibold focus:outline-none transition duration-300 ease-in-out hover:bg-orange-200 data-[state=active]:bg-[#F78C40] data-[state=active]:text-white uppercase"
+              className="rounded-full px-4 py-2 text-sm font-semibold focus:outline-none transition duration-300 ease-in-out hover:bg-orange-200 data-[state=active]:bg-blue-950 data-[state=active]:text-white uppercase"
             >
               Completed
             </TabsTrigger>
             <TabsTrigger
               value="Medical"
-              className="rounded-full px-4 py-2 text-sm font-semibold focus:outline-none transition duration-300 ease-in-out hover:bg-orange-200 data-[state=active]:bg-[#F78C40] data-[state=active]:text-white uppercase"
+              className="rounded-full px-4 py-2 text-sm font-semibold focus:outline-none transition duration-300 ease-in-out hover:bg-orange-200 data-[state=active]:bg-blue-950 data-[state=active]:text-white uppercase"
             >
               Ongoing
             </TabsTrigger>
@@ -70,7 +70,7 @@ const ProjectShowcases = async () => {
                         {project.description}
                       </h4>
                       <Link href={`/projectShowcase/${project._id}`}>
-                        <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-[#F78C40]">
+                        <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-blue-950">
                           Commercial
                         </p>
                       </Link>
@@ -106,7 +106,7 @@ const ProjectShowcases = async () => {
                         {project.description}
                       </h4>
                       <Link href={`/projectShowcase/${project._id}`}>
-                        <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-[#F78C40]">
+                        <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-blue-950">
                           Commercial
                         </p>
                       </Link>
@@ -142,7 +142,7 @@ const ProjectShowcases = async () => {
                         {project.description}
                       </h4>
                       <Link href={`/projectShowcase/${project._id}`}>
-                        <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-[#F78C40]">
+                        <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-blue-950">
                           Commercial
                         </p>
                       </Link>

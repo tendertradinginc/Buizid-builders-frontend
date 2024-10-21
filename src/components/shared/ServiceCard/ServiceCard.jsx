@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ServiceCard({ data }) {
@@ -27,7 +27,7 @@ export default function ServiceCard({ data }) {
           >
             <Button
               variant="secondary"
-              className="w-full hover:text-[#F78C40] gap-1"
+              className="w-full hover:text-blue-950 gap-1"
             >
               Learn more
               <ArrowRight className="h-4 w-4" />
