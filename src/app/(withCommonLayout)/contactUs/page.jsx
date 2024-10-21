@@ -3,8 +3,8 @@ import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
 
 const Contact = () => {
   return (
-    <div className=" bg-white ">
-      <section class=" py-16 md:py-32 w-full rounded-lg container mx-auto">
+    <div className=" bg-white mt-16">
+      <section class=" w-full rounded-lg container mx-auto">
         <SectionTitle
           title="contact Us"
           subTitle="We’d Love To Hear From You"
