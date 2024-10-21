@@ -67,7 +67,7 @@ const CustomSlider = ({ slides }) => {
   return (
     <div className="mt-16">
       <div
-        className="relative w-full h-[80vh] overflow-hidden shadow-lg shadow-blue-500/50"
+        className="relative w-full h-[80vh] overflow-hidden shadow-lg shadow-blue-950/50"
         ref={sliderRef}
         onMouseDown={handleStart}
         onMouseMove={handleMove}

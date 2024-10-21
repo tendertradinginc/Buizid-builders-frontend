@@ -86,7 +86,7 @@ const AllClientFeedback = () => {
           <br />
 
           <div className="mx-auto w-full max-w-screen-lg bg-white p-8">
-            <div className="overflow-x-auto sm:px-1">
+            <div className="overflow-x-auto sm:px-1 min-h-[60vh]">
               <div className="flex items-center justify-between pb-6">
                 <h2 className="text-2xl font-semibold text-blue-950">
                   <AiFillDatabase className="mb-1 inline" />
