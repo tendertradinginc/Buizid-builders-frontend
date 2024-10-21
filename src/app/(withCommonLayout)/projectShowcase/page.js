@@ -1,12 +1,12 @@
-import MaxWidthWrapper from "@/components/custom/MaxWidthWrapper";
-import ProjectShowcases from "@/components/FrontendComponent/action/ProjectShowcases/ProjectShowcase";
-import PageBanner from "@/components/shared/PageBanner/PageBanner";
-import SectionHeadingCenter from "@/components/shared/SectionHeading/SectionHeadingCenter";
+// import MaxWidthWrapper from "@/components/custom/MaxWidthWrapper";
+// import ProjectShowcases from "@/components/FrontendComponent/action/ProjectShowcases/ProjectShowcase";
+// import PageBanner from "@/components/shared/PageBanner/PageBanner";
+// import SectionHeadingCenter from "@/components/shared/SectionHeading/SectionHeadingCenter";
 
 export default function page() {
   return (
     <div className="mt-16">
-      <PageBanner title="PROJECTS SHOWCASE" banner="/projectshowcase.png" />
+      {/* <PageBanne title="PROJECTS SHOWCASE" banner="/projectshowcase.png" />
       <div className="my-20">
         <SectionHeadingCenter
           imageUrl="https://i.postimg.cc/q7L1JF7N/SHOWCASE.png"
@@ -26,7 +26,7 @@ export default function page() {
         <MaxWidthWrapper className="min-h-[100vh]">
           <ProjectShowcases />
         </MaxWidthWrapper>
-      </div>
+      </div> */}
     </div>
   );
 }
