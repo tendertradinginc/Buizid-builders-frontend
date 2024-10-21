@@ -10,10 +10,12 @@ const NavItems = ({ className }) => {
 
   const navLinks = [
     { id: 1, url: "/", label: "Home" },
-    { id: 4, url: "/projectShowcase", label: "Project Showcase" },
-    { id: 6, url: "/blogs", label: "Blog" },
-    { id: 8, url: "/contactUs", label: "Contact Us" },
-    { id: 9, url: "/dashboard", label: "Dashboard" },
+    { id: 2, url: "/products", label: "Products" },
+    { id: 3, url: "/projectShowcase", label: "Project Showcase" },
+    { id: 4, url: "/blogs", label: "Blog" },
+    { id: 5, url: "/contactUs", label: "Contact Us" },
+    { id: 6, url: "/aboutUs", label: "About Us" },
+    { id: 7, url: "/dashboard", label: "Dashboard" },
   ];
 
   return (
