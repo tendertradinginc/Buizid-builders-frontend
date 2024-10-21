@@ -100,7 +100,7 @@ const ProductCreateModal = ({ setReload }) => {
           variant="outline"
           className="flex gap-3 bg-si-primary py-4 text-end font-semibold text-white duration-500 bg-gray-700 "
         >
-          Create Project
+          Create Product
           <FaPlusCircle className="inline text-xl" />
         </Button>
       </AlertDialogTrigger>
@@ -110,7 +110,7 @@ const ProductCreateModal = ({ setReload }) => {
         <AlertDialogDescription></AlertDialogDescription>
         <form className="mx-auto w-full p-4" onSubmit={handleSubmit}>
           <div className="mb-4">
-            <Label className="mb-2 block">Project Name</Label>
+            <Label className="mb-2 block">Product Name</Label>
             <Input
               type="text"
               name="name"

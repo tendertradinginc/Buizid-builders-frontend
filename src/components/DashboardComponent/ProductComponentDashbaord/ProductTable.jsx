@@ -25,11 +25,11 @@ const ProductTable = () => {
       <div className="container mx-auto px-10">
         <br />
         <div className="mx-auto w-full max-w-screen-lg bg-white pb-10">
-          <div className="overflow-x-auto sm:px-1">
+          <div className="overflow-x-auto sm:px-1 min-h-[60vh]">
             <div className="flex items-center justify-between p-6">
               <h2 className="text-2xl font-semibold text-si-primary">
                 <AiFillDatabase className="mb-1 inline"></AiFillDatabase>
-                Project List
+                Product List
               </h2>
               <div className="flex flex-wrap gap-3 text-center">
                 {" "}

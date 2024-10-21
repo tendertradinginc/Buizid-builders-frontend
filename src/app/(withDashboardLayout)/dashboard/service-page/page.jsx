@@ -112,7 +112,7 @@ const Page = () => {
           <br />
 
           <div className="mx-auto w-full bg-white">
-            <div className="overflow-x-auto sm:px-1">
+            <div className="overflow-x-auto sm:px-1 min-h-[60vh]">
               <div className="flex items-center justify-between py-6 px-2">
                 <h2 className="text-2xl font-semibold text-si-primary">
                   <AiFillDatabase className="mb-1 inline" />
@@ -154,7 +154,7 @@ const Page = () => {
               <hr />
 
               <table className="w-full table-auto border">
-                <thead className="bg-blue-500">
+                <thead className="bg-blue-950 text-white">
                   <tr className="text-left">
                     <th className="px-4 py-2">No</th>
                     <th className="px-4 py-2">Name</th>

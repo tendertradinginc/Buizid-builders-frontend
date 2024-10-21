@@ -41,7 +41,7 @@ const SingleFeedback = ({ clientFeedbackData, index, setReload }) => {
                 </p>
             </td> */}
 
-      <td className="py-1 px-8 pr-2 font-semibold text-black">
+      <td className="py-1 px-8 pr-2 font-semibold text-white">
         {/* Call ViewFeedback component */}
         <ViewFeedback data={clientFeedbackData} />
       </td>
