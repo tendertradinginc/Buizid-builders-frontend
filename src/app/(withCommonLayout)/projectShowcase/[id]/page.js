@@ -1,10 +1,8 @@
-import MaxWidthWrapper from "@/components/custom/MaxWidthWrapper";
-import PageBanner from "@/components/shared/PageBanner/PageBanner";
-import SectionHeadingCenter from "@/components/shared/SectionHeading/SectionHeadingCenter";
-import { customLoader } from "@/utils/customLoader";
-import Image from "next/image";
-import { BsBuildings } from "react-icons/bs";
-import { IoLocationOutline } from "react-icons/io5";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
+import Image from 'next/image';
+import Link from 'next/link';
+import { MdOutlineCameraAlt } from 'react-icons/md';
+
 
 const page = async ({ params }) => {
   const res = await fetch(
@@ -16,80 +14,117 @@ const page = async ({ params }) => {
   const data = await res.json();
   const project = data?.data;
 
-  const decodedCategory = decodeURIComponent(params.category);
 
-  const breadcrumbs = [
-    {
-      label: "Home",
-      url: "/",
-    },
-    {
-      label: "Project",
-      url: "/projects",
-    },
-    {
-      label: decodedCategory,
-      url: `/projectShowcase/${decodedCategory}`,
-    },
-  ];
+
 
   return (
     <div className="mt-16">
-      <PageBanner
-        title="OUR SUCCESS"
-        banner="https://i.postimg.cc/cCj8fKHH/Frame-3.png"
-        breadcrumbs={breadcrumbs}
-      />
       <div className="my-20 pt-10">
-        <SectionHeadingCenter
-          className=""
-          subTitle={<p className="text-sm sm:text-lg ">Project name</p>}
-          title={
-            <div className="text-center">
-              <h2 className="text-xl lg:text-4xl">{project?.name}</h2>
-            </div>
-          }
-        />
 
-        <MaxWidthWrapper className="min-h-[100vh]">
+        <div>
+          <h2 className="text-black text-base text-center font-bold">EXPLORE FEATURES</h2>
+          <h1 className="text-black text-2xl text-center font-bold mt-4">Presenting Our Successful Project</h1>
+          <Breadcrumb className="flex justify-center mt-5">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link className='text-gray-500' href="/">Home</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="text-gray-500" />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link className='text-gray-500' href="/projects">Projects</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="text-gray-500" />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link className='text-gray-500' href="/projects">{project?.category}</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+
+          </Breadcrumb>
+        </div>
+
+
+
+        <div className="min-h-[100vh] container mx-auto">
           <div className="text-justify mt-28">
-            <p>{project?.shortDescription}</p>
+
+            <h1 className="text-xl font-bold text-black mb-6">{project?.name}</h1>
+            <p>
+              {project?.shortDescription}
+            </p>
+            <br />
+            <p>
+              {project?.description}
+            </p>
+            <br />
+            <p>
+              {project?.shortDescription}
+            </p>
+            <br />
+            <p>
+              {project?.description}
+            </p>
             <br />
             <br />
 
-            <Image
-              src={project?.image}
-              alt="project details"
-              loader={customLoader}
-              width={600}
-              height={400}
-              className="shadow-md w-full h-[80vh] object-cover"
-            />
+            <h1 className="text-black text-xl py-4 font-bold">Photo Gallery From Site</h1>
 
             <div>
-              <div className="rounded-none mt-2 border-0 ">
-                <div className="flex justify-start gap-6">
-                  <div className="flex justify-start font-medium py-2">
-                    <span className="font-semibold text-black flex">
-                      <IoLocationOutline className="mr-1 text-orange-500 text-lg" />
-                      {project?.location}
-                    </span>
+
+
+
+              <div className="grid grid-cols-2 gap-10 mt-4">
+                {project?.slice(0, 4).map((image, index) => (
+                  <div key={index} className="">
+                    <Image
+                      src={project?.image}
+                      alt={"image"}
+                      width={600}
+                      height={400}
+                      className="shadow-md w-full h-full object-cover"
+                    />
+
+                    <div className="flex items-center space-x-2 mt-2 text-black">
+                      <MdOutlineCameraAlt className="text-lg font-bold text-[#003366]" />
+                      <span className="text-[#2b5680]">
+                        Photo Capture: <span className="font-semibold">{project?.handOverDate}</span>.
+                        Time: <span className="font-semibold">{project?.createdAt}</span>
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex justify-start font-medium py-2">
-                    <span className="font-semibold text-black flex">
-                      <BsBuildings className="mr-1 text-orange-500" />
-                      {project?.category}
-                    </span>
-                  </div>
+                ))}
+              </div>
+
+
+
+              <div className="mt-20">
+                <h1 className="font-semibold text-gray-700 text-xl">
+
+
+                </h1>
+                <br />
+                <div className="text-[#636363]">
+                  <p>
+                    {project?.shortDescription}
+                  </p>
+                  <br />
+                  <p>
+
+                    {project?.description}
+                  </p>
                 </div>
               </div>
-              <div className="mt-10">
-                <p>{project?.description}</p>
-              </div>
             </div>
+
           </div>
-        </MaxWidthWrapper>
+        </div>
       </div>
+
     </div>
   );
 };
