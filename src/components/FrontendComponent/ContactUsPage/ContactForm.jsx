@@ -115,7 +115,7 @@ const ContactForm = () => {
                   loader={customLoader}
                   width={300}
                   height={306}
-                  src="Frame 76554.png"
+                  src="contactus.jpg"
                   alt="Office"
                   class="object-contain "
                 />

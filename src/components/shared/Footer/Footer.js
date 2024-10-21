@@ -1,3 +1,5 @@
+import { customLoader } from "@/app/utils/customLoader";
+import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaHome, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
@@ -18,10 +20,17 @@ const Footer = () => {
             {/* First Column */}
             <ul className="flex flex-col gap-3">
               <li className="flex gap-2 text-3xl font-bold text-white">
-                DCL Engineering
+                <Image
+                  loader={customLoader}
+                  width={300}
+                  height={306}
+                  src="   logo-footer.png"
+                  alt="Office"
+                  class="object-contain "
+                />
               </li>
               <li className="max-w-80">
-                <p className="mt-5 font-medium leading-7 text-gray-300">
+                <p className="mt-5 font-medium leading-7 text-justify text-gray-300">
                   Focusing on medium to large-scale commercial construction
                   projects, we work with both investors and developers to create
                   landmarks that make an impact.
@@ -129,7 +138,7 @@ const Footer = () => {
           <div className="border-t bg-[#0A2F4D] border-gray-300 p-5">
             <h1 className="text-center font-semibold text-gray-300">
               {" "}
-              &copy; Copyright DCL Engineering 2023 . All right reserved.
+              &copy; Copyright M/S The Baizid Builders . All right reserved.
             </h1>
           </div>
         </MaxWidthWrapper>
