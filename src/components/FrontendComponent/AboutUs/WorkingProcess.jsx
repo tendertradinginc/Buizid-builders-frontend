@@ -35,11 +35,11 @@ const WorkingProcess = () => {
         <div className="mt-10 flex justify-center max-w-7xl mx-auto">
             <section className="mt-20">
                 <div className="text-center">
-                    <h1 className="text-sm text-[#003366] font-bold">WORKING PROCESS</h1>
-                    <h2 className="text-2xl text-black font-bold pt-4">Check out our working process</h2>
+                    <h1 className="text-lg text-[#003366] font-bold">WORKING PROCESS</h1>
+                    <h2 className="text-3xl text-black font-bold pt-4">Check out our working process</h2>
                 </div>
                 <div className="mt-16">
-                    <p>
+                    <p className="text-[#5f5f5f]">
                         Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                         <br />
                         <br />
