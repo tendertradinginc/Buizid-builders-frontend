@@ -3,11 +3,12 @@ import { AlertDialog } from "@radix-ui/react-alert-dialog";
 import ProjectUpdate from "./ProductUpdate";
 
 const SingleProduct = ({ data, index, setReload }) => {
-  const { name, status } = data;
+  const { name, status, category } = data;
   return (
     <tr className={` ${index % 2 === 1 ? "bg-[#f2f2f2]" : ""}`}>
       <td className="px-4 py-1">{index + 1}</td>
       <td className="px-4 py-1 text-center font-semibold">{name}</td>
+      <td className="px-4 py-1 text-center font-semibold">{category}</td>
       <td className="px-4 py-1 text-center font-semibold">
         {status ? "Yes" : "No"}
       </td>

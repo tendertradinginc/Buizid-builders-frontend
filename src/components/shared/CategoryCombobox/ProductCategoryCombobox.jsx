@@ -6,6 +6,7 @@ export function ProductCategoryCombobox({
   setCategory,
   apiEndPoint,
   defaultAll,
+  setIsdisabled,
 }) {
   const [open, setOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,7 +18,7 @@ export function ProductCategoryCombobox({
         const res = await axios.get(
           `http://localhost:5000/api/v1/category/${apiEndPoint}`
         );
-
+        console.log(res.data);
         setCategories(res.data.data);
         setFilteredCategories(res.data.data);
       } catch (error) {
@@ -41,6 +42,7 @@ export function ProductCategoryCombobox({
 
   const handleSelectCategory = (selectedCategory) => {
     setCategory(selectedCategory);
+    setIsdisabled && setIsdisabled(false);
     setOpen(false);
   };
 

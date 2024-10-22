@@ -29,7 +29,7 @@ const ProductTable = () => {
             <div className="flex items-center justify-between p-6">
               <h2 className="text-2xl font-semibold text-si-primary">
                 <AiFillDatabase className="mb-1 inline"></AiFillDatabase>
-                Product List
+                Product List - {productsCount}
               </h2>
               <div className="flex flex-wrap gap-3 text-center">
                 {" "}
@@ -51,6 +51,7 @@ const ProductTable = () => {
                     <th className="px-4 py-2">No</th>
                     <th className="px-4 py-2 text-center">Title</th>
                     <th className="px-4 py-2 text-center">Featured</th>
+                    <th className="px-4 py-2 text-center">Category</th>
                     <th className="px-4 py-2">Actions</th>
                   </tr>
                 </thead>
