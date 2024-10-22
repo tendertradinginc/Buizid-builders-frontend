@@ -23,7 +23,7 @@ const ProductUpdate = ({ data, setReload }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDisbaled, setIsdisabled] = useState(true);
   const [loading, setLoading] = useState(false);
-  // const [category, setCategory] = useState(data?.ccategory || "");
+
   const {
     name,
     model,
@@ -53,11 +53,9 @@ const ProductUpdate = ({ data, setReload }) => {
     const file = e.target.files[0];
     let newImgUrl = await uploadImageToImgBB(file);
     let allImage = imageFile;
-    console.log(imageFile[i]);
-    console.log(allImage);
+
     if (imageFile[i] !== newImgUrl) {
       allImage[i] = newImgUrl;
-      console.log(allImage);
     }
     setImageFile(allImage);
     setIsdisabled(false);
@@ -253,6 +251,7 @@ const ProductUpdate = ({ data, setReload }) => {
               setCategory={setUpdatedCategory}
               apiEndPoint="product-category"
               defaultAll={true}
+              setIsdisabled={setIsdisabled}
             />
           </div>
           <div className="mb-4">
