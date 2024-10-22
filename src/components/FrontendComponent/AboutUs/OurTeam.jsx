@@ -114,9 +114,9 @@ const OurTeam = () => {
                                                                         href={teamMember.socialMedia.linkedin}
                                                                         target="_blank"
                                                                         rel="noopener noreferrer"
-                                                                        className="bg-white p-2 rounded-full"
+                                                                        className="bg-white p-3 rounded-full"
                                                                     >
-                                                                        <AiOutlineLinkedin className="lg" />
+                                                                        <AiOutlineLinkedin className="xl" />
                                                                     </Link>
                                                                 )}
                                                                 {teamMember.socialMedia.facebook && (
