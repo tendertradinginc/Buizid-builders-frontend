@@ -14,12 +14,12 @@ const WhyChooseUs = () => {
         <div className="mt-10 ">
             <section>
                 <div className="text-center">
-                    <h1 className="text-lg text-[#003366] font-bold">WHY CHOOSE US</h1>
-                    <h2 className="text-3xl text-black font-bold pt-4">We Help You Build On Your Past And Prepare For The Feature</h2>
+                    <h1 className="lg:text-lg text-sm text-[#003366] font-bold">WHY CHOOSE US</h1>
+                    <h2 className="lg:text-3xl text-lg text-black font-bold pt-4">We Help You Build On Your Past And Prepare For The Feature</h2>
                 </div>
                 <div className="mt-10 flex justify-center max-w-7xl mx-auto">
                     <Tabs defaultValue="mission" className="w-full">
-                        <TabsList className="flex justify-center space-x-12 max-w-lg h-14 mx-auto px-4">
+                        <TabsList className="grid lg:grid-cols-4 grid-cols-2 justify-items-center space-x-12 max-w-lg h-14 mx-auto px-4">
                             <TabsTrigger
                                 value="mission"
                                 className="rounded-none px-1 py-2 text-lg font-semibold focus:outline-none transition duration-300 ease-in-out  data-[state=active]:bg-secondary data-[state=active]:shadow-none data-[state=active]:text-[#003366] data-[state=active]:border-b-2 data-[state=active]:border-gray-500"
@@ -47,14 +47,14 @@ const WhyChooseUs = () => {
                         </TabsList>
 
                         <TabsContent className="mt-6" value="mission">
-                            <h1 className="font-bold text-lg mb-6 text-black">Release of Letraset sheets containing Lorem Ipsum passages.</h1>
-                            <p className="text-[#5f5f5f] font-medium">
+                            <h1 className="font-bold text-lg lg:mb-6 mt-20 text-black lg:px-0 px-4">Release of Letraset sheets containing Lorem Ipsum passages.</h1>
+                            <p className="text-[#5f5f5f] font-medium lg:mt-0 mt-6 text-justify lg:px-0 px-4">
                                 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                                 <br />
                                 <br />
                                 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                             </p>
-                            <p className="max-w-6xl mx-auto mt-6 text-[#5f5f5f] font-medium">
+                            <p className="max-w-6xl mx-auto mt-6 text-[#5f5f5f] font-medium text-justify lg:px-0 px-4">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
                                 1. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <br />
                                 2. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy. <br />
@@ -63,26 +63,26 @@ const WhyChooseUs = () => {
                             </p>
                         </TabsContent>
                         <TabsContent value="vision">
-                            <h1 className="font-bold text-lg mb-6 text-black">
+                            <h1 className="font-bold text-lg lg:mb-6 mt-20 text-black">
                                 Release of Letraset sheets containing Lorem Ipsum passages.
                             </h1>
-                            <p className="text-[#5f5f5f] font-medium">
+                            <p className="text-[#5f5f5f] font-medium lg:mt-0 mt-6 text-justify lg:px-0 px-4">
                                 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                             </p>
                         </TabsContent>
                         <TabsContent value="value">
-                            <h1 className="font-bold text-lg mb-6 text-black">
+                            <h1 className="font-bold text-lg lg:mb-6 mt-20 text-black">
                                 Release of Letraset sheets containing Lorem Ipsum passages.
                             </h1>
-                            <p className="text-[#5f5f5f] font-medium">
+                            <p className="text-[#5f5f5f] font-medium lg:mt-0 mt-6 text-justify lg:px-0 px-4">
                                 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                             </p>
                         </TabsContent>
                         <TabsContent value="awardWining">
-                            <h1 className="font-bold text-lg mb-6 text-black">
+                            <h1 className="font-bold text-lg lg:mb-6 mt-20 text-black">
                                 Release of Letraset sheets containing Lorem Ipsum passages.
                             </h1>
-                            <p className="text-[#5f5f5f] font-medium">
+                            <p className="text-[#5f5f5f] lg:mt-0 mt-6 font-medium text-justify lg:px-0 px-4">
                                 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                             </p>
                         </TabsContent>
