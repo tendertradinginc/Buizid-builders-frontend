@@ -10,7 +10,7 @@ const useAllProducts = (page, limit, searchValue, category) => {
   useEffect(() => {
     const result = async () => {
       try {
-        setLoading(true);
+ setLoading(true)
         const response = await fetch(
           `http://localhost:5000/api/v1/products?page=${page}&limit=${limit}&search=${searchValue}&category=${category}`
         );

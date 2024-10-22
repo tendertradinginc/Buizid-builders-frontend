@@ -17,20 +17,33 @@ import useAllProducts from "@/hooks/useAllProducts";
 import { customLoader } from "@/utils/customLoader";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const ProductPage = () => {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
+  const [allCategories, setAllCategories] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageLimit, setPageLimit] = useState(12);
-  const { products, setLoading, loading, productsCount } = useAllProducts(
+  const [categoryLoading, setCategoryLoading] = useState(true);
+  const { products, setReload, loading, productsCount } = useAllProducts(
     currentPage,
     pageLimit,
     search,
     category
   );
 
+  useEffect(() => {
+    fetch("http://localhost:5000/api/v1/category/product-category")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllCategories(data?.data);
+        setCategoryLoading(false);
+        console.log(data?.data);
+      })
+      .catch((err) => console.log(err));
+  }, [categoryLoading]);
   return (
     <div className="py-20 container mx-auto">
       <div className="text-center space-y-2 mt-10">
@@ -49,72 +62,86 @@ const ProductPage = () => {
           <FaSearch className="absolute top-2.5 right-2 text-[#003366]" />
         </div>
         <Select
-          onValueChange={(value) => setCategory(value)}
+          onValueChange={(value) => {
+            setReload((prev) => prev + 1);
+            setCategory(value);
+            console.log(category);
+          }}
           className="bg-transparent "
         >
           <SelectTrigger className="bg-transparent max-w-sm border border-[#003366] h-[37px]">
-            <SelectValue placeholder="Select a fruit" />
+            <SelectValue placeholder="Select Category" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectLabel>Fruits</SelectLabel>
-              <SelectItem value="apple">Apple</SelectItem>
-              <SelectItem value="banana">Banana</SelectItem>
-              <SelectItem value="blueberry">Blueberry</SelectItem>
-              <SelectItem value="grapes">Grapes</SelectItem>
-              <SelectItem value="pineapple">Pineapple</SelectItem>
+              <SelectLabel>Category</SelectLabel>
+              {!categoryLoading &&
+                allCategories?.map((item) => (
+                  <SelectItem key={item?._id} value={item?.name}>
+                    {item?.name}
+                  </SelectItem>
+                ))}
             </SelectGroup>
           </SelectContent>
         </Select>{" "}
       </div>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-        {products?.map((item) => (
-          <div className="bg-white" key={item?._id}>
-            <Image
-              src={item?.image[0]}
-              alt={item?.name}
-              height={400}
-              width={300}
-              style={{ width: "100%" }}
-              loader={customLoader}
-              className="w-full h-auto"
-            />
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  min-h-[60vh]">
+        {loading
+          ? "loading..."
+          : products?.length > 0
+          ? products?.map((item) => (
+              <div className="bg-white" key={item?._id}>
+                <Image
+                  src={item?.image[0]}
+                  alt={item?.name}
+                  height={400}
+                  width={300}
+                  style={{ width: "100%" }}
+                  loader={customLoader}
+                  className="w-full h-auto"
+                />
 
-            <div className="p-3 space-y-3">
-              <h1 className="text-[#090909] text-[22px] font-semibold ">
-                {item?.name}
-              </h1>
-              <p>
-                Model No. <span className="font-semibold">{item?.model}</span>
-              </p>
-              <p className="line-clamp-2 text-sm">{item?.shortDescription}</p>
-              <div className="flex justify-center py-2">
-                <Link
-                  className="inline-block mx-auto"
-                  href={`/products/${item?._id}`}
-                >
-                  {" "}
-                  <Button className="bg-[#09FF220F] hover:bg-[#09FF220F] text-[#00DF16] hover:text-[#00DF16] font-semibold ">
-                    Explore More
-                  </Button>
-                </Link>
+                <div className="p-3 space-y-3">
+                  <h1 className="text-[#090909] text-[22px] font-semibold ">
+                    {item?.name}
+                  </h1>
+                  <p>
+                    Model No.{" "}
+                    <span className="font-semibold">{item?.model}</span>
+                  </p>
+                  <p className="line-clamp-2 text-sm">
+                    {item?.shortDescription}
+                  </p>
+                  <div className="flex justify-center py-2">
+                    <Link
+                      className="inline-block mx-auto"
+                      href={`/products/${item?._id}`}
+                    >
+                      {" "}
+                      <Button className="bg-[#09FF220F] hover:bg-[#09FF220F] text-[#00DF16] hover:text-[#00DF16] font-semibold ">
+                        Explore More
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
+            ))
+          : "No Data Found"}
       </div>
-      <div className="mt-12">
-        <PaginationRaw
-          data={{
-            setCurrentPage,
-            dataCount: productsCount,
-            currentPage,
-            pageLimit,
-            setPageLimit,
-            defaultPageLimit: 12,
-          }}
-        />
-      </div>
+      {products?.length > 0 && (
+        <div className="mt-12">
+          <PaginationRaw
+            data={{
+              setCurrentPage,
+              dataCount: productsCount,
+              currentPage,
+              pageLimit,
+              setPageLimit,
+              defaultPageLimit: 12,
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };
