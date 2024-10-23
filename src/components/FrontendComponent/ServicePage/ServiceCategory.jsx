@@ -80,6 +80,60 @@ const ServiceCategory = () => {
                             ))}
                         </ul>
                     </div>
+
+                    {/* Contact Section */}
+                    <div className="relative bg-[url('https://i.postimg.cc/yYrvcbvJ/Frame-76615.png')] bg-cover bg-center text-white p-4 sm:p-6 md:p-8 rounded-none shadow-lg mt-16 h-[270px] md:h-[340px]">
+
+                        {/* <div className="absolute inset-0 bg-black bg-opacity-0 rounded-lg"></div> */}
+
+                        <div className="relative z-10 space-y-4">
+                            <h3 className="text-base font-bold mb-4">Have Additional Questions?</h3>
+                            <p className="mb-2 sm:text-lg md:text-xl font-bold text-[#ff7300]">Contact One of Our Agents!</p>
+                            <p className="text-sm p">Phone #1: (0712) 819 79 555</p>
+                            <p className="text-sm ">Phone #2: (0712) 819 79 555</p>
+                            <p className="text-sm mb-6">Email: hello@company.com</p>
+                            <button className="flex items-center gap-2 bg-white text-[#003366] px-7 py-1 text-sm rounded-none">
+                                Contact Us
+                                <GoArrowRight />
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div className="mt-10">
+                        <div className="flex flex-col items-center space-y-10 px-4 md:px-0">
+                            {/* Download Brochure Section */}
+                            <div className="w-full bg-[#003366] text-white py-5  flex justify-center items-center gap-6">
+                                <h2 className="text-sm font-semibold ">Download Our Services <br /> Brochure</h2>
+                                <RiDownloadCloud2Line className="text-2xl" />
+                            </div>
+
+                            {/* Testimonial Section */}
+                            <div className="w-full max-w-md bg-white text-center p-6">
+                                <p className="text-gray-600 italic mb-6 text-xs">
+                                    If you can offer a free tier that provides a lot of value, it will naturally help your product to spread much more rapidly.
+                                </p>
+                                <div className="flex items-center justify-center space-x-4">
+
+                                    <div className="relative w-12 h-12">
+                                        <Image
+                                            src="https://i.postimg.cc/cJ6KYFkJ/Ellipse-9.png"
+                                            alt="Nafiul Islam Jim"
+                                            className="rounded-full"
+                                            layout="fill"
+                                            objectFit="cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="font-bold">Nafiul Islam Jim</p>
+                                        <p className="text-sm text-start text-gray-500">CEO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
 
