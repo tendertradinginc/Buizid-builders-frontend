@@ -6,9 +6,9 @@ import BannerSection from "@/components/FrontendComponent/HomePage/BannerSection
 export default function Home() {
   return (
     <div>
-      <BannerSection></BannerSection>
+      {/* <BannerSection></BannerSection> */}
 
-      <Clients />
+      {/* <Clients /> */}
 
     </div>
   );
