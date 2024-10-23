@@ -9,7 +9,9 @@ import { RiDownloadCloud2Line } from "react-icons/ri";
 
 const ServiceCategory = () => {
     const [selectedCategory, setSelectedCategory] = useState("Construction Services");
-
+    const [loading, setLoading] = useState(false);
+    const [openItem, setOpenItem] = useState("item-2");
+    const skeleton = new Array(8).fill(0);
 
     const categories = [
         "Construction Services",
@@ -170,6 +172,55 @@ const ServiceCategory = () => {
                             <p className="text-gray-700 mb-4 text-justify">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sit pariatur aspernatur deleniti alias tempore velit quisquam impedit quos nihil ex maiores, praesentium repellendus voluptas dicta libero itaque mollitia eveniet, nobis excepturi aut similique? Illo magnam doloribus voluptate minus dolor quas, distinctio amet maiores dicta nobis reprehenderit cupiditate voluptas optio inventore natus explicabo accusantium consequuntur sint et in. Debitis, aut. Reiciendis inventore quam iste veritatis voluptatem, quae cumque consequuntur? Sapiente voluptatem odio reprehenderit quos porro ut totam ratione laborum, optio, eaque necessitatibus! Vero corrupti, veritatis beatae aliquam quibusdam veniam praesentium?
                             </p>
+                        </div>
+                    </div>
+
+
+                    <div className="my-10">
+                        <div>
+                            <h1 className="text-black font-bold lg:text-3xl text-xl pt-6">
+                                We Building Everything Best <span className="text-[#008080] font-bold lg:text-3xl text-xl">That  You Needed.</span>
+                            </h1>
+                            <p className="text-gray-700 mt-8 text-justify">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            </p>
+                        </div>
+
+                        <div>
+
+
+                            <div className="lg:flex-row md:flex-row flex-col justify-between items-center">
+                                <div className="py-8  bg-gray-100">
+                                    {loading
+                                        ? skeleton?.map((item, idx) => (
+                                            <div className="h-14 mb-14 bg-gray-200/50" key={idx}></div>
+                                        ))
+                                        :
+                                        faqData.slice(0, 3)?.map((faq, index) => (
+                                            <div
+                                                key={index}
+                                                className={`px-2 my-2  bg-white`} // Added bg-white and my-2 for background and spacing
+                                            >
+                                                <Accordion
+                                                    type="single"
+                                                    collapsible
+                                                    value={openItem} // Manage open item here
+                                                    onValueChange={(value) => setOpenItem(value)} // Handle state 
+                                                >
+                                                    <AccordionItem value={`item-${index + 1}`}>
+                                                        <AccordionTrigger className="text-base font-medium text-black">{faq?.question}</AccordionTrigger>
+                                                        <AccordionContent className="text-sm text-gray-900">
+                                                            {faq?.answer}
+                                                        </AccordionContent>
+                                                    </AccordionItem>
+                                                </Accordion>
+                                            </div>
+                                        ))}
+                                </div>
+                            </div>
+
+
+
                         </div>
                     </div>
 
