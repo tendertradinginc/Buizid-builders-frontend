@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
-import MaxWidthWrapper from "../../custom/MaxWidthWrapper";
 import NavItems from "./NavItems";
 
 const Navbar = () => {
@@ -38,22 +37,22 @@ const Navbar = () => {
         isVisible ? "top-0" : "-top-24"
       }`}
     >
-      <MaxWidthWrapper className="flex items-center justify-between">
+      <div className="flex items-center justify-between container mx-auto px-2 ">
         <Link href="/">
           <Image
             loader={customLoader}
-            src="logo.png"
+            src="/logo.png"
             width={80}
             height={80}
             alt=""
           />
         </Link>
 
-        <div className="hidden md:block  ">
+        <div className="hidden lg:block  ">
           <NavItems />
         </div>
 
-        <div className="hidden md:block  ">
+        <div className="hidden lg:block  ">
           <Link href="/AboutUs#contact-section">
             {" "}
             <Button>Contact Us</Button>
@@ -61,14 +60,14 @@ const Navbar = () => {
         </div>
 
         <Sheet>
-          <SheetTrigger className="md:hidden">
+          <SheetTrigger className="lg:hidden">
             <RiMenu3Line className="size-5" />
           </SheetTrigger>
           <SheetContent>
             <NavItems />
           </SheetContent>
         </Sheet>
-      </MaxWidthWrapper>
+      </div>
     </nav>
   );
 };

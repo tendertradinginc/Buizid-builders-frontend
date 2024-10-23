@@ -4,7 +4,6 @@ import Link from "next/link";
 import { FaFacebook, FaHome, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
-import MaxWidthWrapper from "../../custom/MaxWidthWrapper";
 
 const Footer = () => {
   return (
@@ -15,16 +14,16 @@ const Footer = () => {
       className="w-full bg-cover bg-no-repeat"
     >
       <div className="bg-[#0A2F4D]">
-        <MaxWidthWrapper className="pt-12">
-          <div className="flex flex-wrap gap-x-28 gap-y-10 py-10 ">
+        <div className=" container mx-auto px-2 pt-12">
+          <div className="flex flex-wrap justify-between gap-x-28 gap-y-10 py-10 ">
             {/* First Column */}
-            <ul className="flex flex-col gap-3">
-              <li className="flex gap-2 text-3xl font-bold text-white">
+            <ul className="flex flex-col  md:gap-3">
+              <li className="flex gap-2 text-3xl font-bold justify-center text-white">
                 <Image
                   loader={customLoader}
                   width={300}
                   height={306}
-                  src="   logo-footer.png"
+                  src="/logo-footer.png"
                   alt="Office"
                   class="object-contain "
                 />
@@ -141,7 +140,7 @@ const Footer = () => {
               &copy; Copyright M/S The Baizid Builders . All right reserved.
             </h1>
           </div>
-        </MaxWidthWrapper>
+        </div>
       </div>
     </div>
   );
