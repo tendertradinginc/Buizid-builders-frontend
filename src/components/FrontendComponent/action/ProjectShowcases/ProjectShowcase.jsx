@@ -18,7 +18,6 @@ const ProjectShowcases = async () => {
   const completed = allProjects.filter(
     (item) => item?.category === "completed"
   );
-  console.log(allProjects);
   return (
     <div>
       <div className="mb-10 flex justify-center">
@@ -59,20 +58,20 @@ const ProjectShowcases = async () => {
                       loader={customLoader}
                       className="transition-opacity duration-300 group-hover:opacity-80"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-50 flex flex-col justify-end items-start p-4 px-10">
-                      <h2 className="text-white text-xl font-semibold flex items-center transition-transform duration-700 group-hover:-translate-y-6 uppercase">
-                        {project.name}
-                        <MdArrowOutward className="lg:ml-10 ml-2 h-6 w-6 text-white" />
-                      </h2>
-                      <h4 className="my-2 text-white transition-transform duration-700 group-hover:-translate-y-6 group-hover:opacity-100 opacity-0 line-clamp-2">
-                        {project.description}
-                      </h4>
-                      <Link href={`/projectShowcase/${project._id}`}>
+                    <Link href={`/projectShowcase/${project._id}`}>
+                      <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-50 flex flex-col justify-end items-start p-4 px-10">
+                        <h2 className="text-white text-xl font-semibold flex items-center transition-transform duration-700 group-hover:-translate-y-6 uppercase">
+                          {project.name}
+                          <MdArrowOutward className="lg:ml-10 ml-2 h-6 w-6 text-white" />
+                        </h2>
+                        <h4 className="my-2 text-white transition-transform duration-700 group-hover:-translate-y-6 group-hover:opacity-100 opacity-0 line-clamp-2">
+                          {project.description}
+                        </h4>
                         <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-blue-950">
                           Commercial
                         </p>
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   </div>
                 </Card>
               ))}
@@ -94,20 +93,20 @@ const ProjectShowcases = async () => {
                       loader={customLoader}
                       className="transition-opacity duration-300 group-hover:opacity-80"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-50 flex flex-col justify-end items-start p-4 px-10">
-                      <h2 className="text-white text-xl font-semibold flex items-center transition-transform duration-700 group-hover:-translate-y-6 uppercase">
-                        {project.name}
-                        <MdArrowOutward className="lg:ml-10 ml-2 h-6 w-6 text-white" />
-                      </h2>
-                      <h4 className="my-2 text-white transition-transform duration-700 group-hover:-translate-y-6 group-hover:opacity-100 opacity-0 line-clamp-2">
-                        {project.description}
-                      </h4>
-                      <Link href={`/projectShowcase/${project._id}`}>
+                    <Link href={`/projectShowcase/${project._id}`}>
+                      <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-50 flex flex-col justify-end items-start p-4 px-10">
+                        <h2 className="text-white text-xl font-semibold flex items-center transition-transform duration-700 group-hover:-translate-y-6 uppercase">
+                          {project.name}
+                          <MdArrowOutward className="lg:ml-10 ml-2 h-6 w-6 text-white" />
+                        </h2>
+                        <h4 className="my-2 text-white transition-transform duration-700 group-hover:-translate-y-6 group-hover:opacity-100 opacity-0 line-clamp-2">
+                          {project.description}
+                        </h4>
                         <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-blue-950">
                           Commercial
                         </p>
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   </div>
                 </Card>
               ))}
@@ -129,20 +128,20 @@ const ProjectShowcases = async () => {
                       loader={customLoader}
                       className="transition-opacity duration-300 group-hover:opacity-80"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-50 flex flex-col justify-end items-start p-4 px-10">
-                      <h2 className="text-white text-xl font-semibold flex items-center transition-transform duration-700 group-hover:-translate-y-6 uppercase">
-                        {project.name}
-                        <MdArrowOutward className="lg:ml-10 ml-2 h-6 w-6 text-white" />
-                      </h2>
-                      <h4 className="my-2 text-white transition-transform duration-700 group-hover:-translate-y-6 group-hover:opacity-100 opacity-0 line-clamp-2">
-                        {project.description}
-                      </h4>
-                      <Link href={`/projectShowcase/${project._id}`}>
+                    <Link href={`/projectShowcase/${project._id}`}>
+                      <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-50 flex flex-col justify-end items-start p-4 px-10">
+                        <h2 className="text-white text-xl font-semibold flex items-center transition-transform duration-700 group-hover:-translate-y-6 uppercase">
+                          {project.name}
+                          <MdArrowOutward className="lg:ml-10 ml-2 h-6 w-6 text-white" />
+                        </h2>
+                        <h4 className="my-2 text-white transition-transform duration-700 group-hover:-translate-y-6 group-hover:opacity-100 opacity-0 line-clamp-2">
+                          {project.description}
+                        </h4>
                         <p className="text-white font-semibold py-2 px-4 border-2 border-white rounded-full transition-all duration-700 group-hover:-translate-y-6 hover:bg-blue-950">
                           Commercial
                         </p>
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   </div>
                 </Card>
               ))}

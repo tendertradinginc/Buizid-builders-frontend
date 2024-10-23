@@ -19,8 +19,8 @@ const NavItems = ({ className }) => {
   ];
 
   return (
-    <div className="flex flex-col items-center md:flex-row">
-      <div className="flex flex-col items-center md:flex-row">
+    <div className="flex flex-col items-center lg:flex-row">
+      <div className="flex flex-col items-center lg:flex-row">
         {navLinks.map((link) => (
           <Button
             asChild
@@ -35,7 +35,7 @@ const NavItems = ({ className }) => {
         ))}
       </div>
 
-      <div className="mt-2 block md:hidden">
+      <div className="mt-2 block lg:hidden">
         <Link href="/AboutUs#contact-section">
           {" "}
           <Button variant="dcl_pi">Contact Us</Button>
