@@ -136,7 +136,44 @@ const ServiceCategory = () => {
 
                 </div>
 
+                {/* Right side - Category Details */}
+                <div className="lg:col-span-3">
+                    <div className="mb-8">
+                        <div className=" mb-4">
+                            <Image
+                                src={"https://i.postimg.cc/kGR8SFBf/Frame-76613.png"}
+                                alt={"image"}
+                                width={600}
+                                height={400}
+                                className="shadow-md w-full h-auto object-cover"
+                            />
+                        </div>
 
+                        <div className="mt-10">
+
+                            <p className="text-gray-700 mb-4 text-justify">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sit placeat culpa repellat, eius impedit dolorem sint doloremque temporibus voluptate itaque beatae ab quod sequi eos, in atque recusandae reprehenderit soluta eveniet veritatis deleniti optio ratione tempora. Incidunt eligendi possimus officia alias error perspiciatis sit quod consequuntur? Perspiciatis dolores recusandae sapiente deleniti atque quasi provident quam? Sit optio dolorem sunt nemo eum laborum eligendi, itaque repellat placeat corporis a facilis qui quis temporibus. Cupiditate veniam ipsam laudantium unde facilis cum.
+                            </p>
+
+                            <div className="bg-[#e1e7f1] border-l-4 border-[#003366] p-4 rounded-l-lg shadow-sm my-4">
+                                <p className="text-gray-700 text-justify">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </p>
+                            </div>
+
+
+                            <p className="text-gray-700 mb-4 text-justify">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius obcaecati quaerat accusamus sapiente perferendis unde recusandae itaque libero est dicta, qui, repellendus culpa illo nam ratione? Consequatur sit quis provident velit. Expedita illum, magnam doloremque voluptate neque vero quis aperiam id nam necessitatibus deserunt, accusamus sapiente commodi enim iusto perspiciatis ipsam ducimus ex at? Perferendis natus molestias corrupti voluptatibus ad?
+                            </p>
+
+
+                            <p className="text-gray-700 mb-4 text-justify">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sit pariatur aspernatur deleniti alias tempore velit quisquam impedit quos nihil ex maiores, praesentium repellendus voluptas dicta libero itaque mollitia eveniet, nobis excepturi aut similique? Illo magnam doloribus voluptate minus dolor quas, distinctio amet maiores dicta nobis reprehenderit cupiditate voluptas optio inventore natus explicabo accusantium consequuntur sint et in. Debitis, aut. Reiciendis inventore quam iste veritatis voluptatem, quae cumque consequuntur? Sapiente voluptatem odio reprehenderit quos porro ut totam ratione laborum, optio, eaque necessitatibus! Vero corrupti, veritatis beatae aliquam quibusdam veniam praesentium?
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     );
