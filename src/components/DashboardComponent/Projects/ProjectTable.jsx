@@ -54,6 +54,7 @@ const ProjectTable = () => {
                   <tr className="">
                     <th className="px-4 py-2">No</th>
                     <th className="px-4 py-2 text-left">Title</th>
+                    <th className="px-4 py-2 text-left">Category</th>
                     <th className="px-4 py-2">Actions</th>
                   </tr>
                 </thead>
