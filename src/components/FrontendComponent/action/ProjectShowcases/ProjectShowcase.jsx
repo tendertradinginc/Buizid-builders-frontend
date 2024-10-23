@@ -13,13 +13,12 @@ const fetchProjects = async () => {
 
 const ProjectShowcases = async () => {
   const allProjects = await fetchProjects();
-
   const ongoing = allProjects.filter((item) => item?.category === "on-going");
   const upcoming = allProjects.filter((item) => item?.category === "up-coming");
   const completed = allProjects.filter(
     (item) => item?.category === "completed"
   );
-
+  console.log(allProjects);
   return (
     <div>
       <div className="mb-10 flex justify-center">
@@ -54,10 +53,9 @@ const ProjectShowcases = async () => {
                 >
                   <div className="relative w-full aspect-square">
                     <Image
-                      src={project.image}
+                      src={project.image[0]}
                       alt={project.name}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
                       loader={customLoader}
                       className="transition-opacity duration-300 group-hover:opacity-80"
                     />
@@ -90,10 +88,9 @@ const ProjectShowcases = async () => {
                 >
                   <div className="relative w-full aspect-square">
                     <Image
-                      src={project.image}
+                      src={project.image[0]}
                       alt={project.name}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
                       loader={customLoader}
                       className="transition-opacity duration-300 group-hover:opacity-80"
                     />
@@ -126,10 +123,9 @@ const ProjectShowcases = async () => {
                 >
                   <div className="relative w-full aspect-square">
                     <Image
-                      src={project.image}
+                      src={project.image[0]}
                       alt={project.name}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
                       loader={customLoader}
                       className="transition-opacity duration-300 group-hover:opacity-80"
                     />
